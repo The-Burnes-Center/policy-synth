@@ -1,0 +1,40 @@
+Running hook_eval_script.sh at Tue May  7 03:40:40 UTC 2024
+Setting entry_key to  in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:40:42 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:44:02 UTC 2024
+Setting entry_key to  in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:44:04 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:45:24 UTC 2024
+Setting entry_key to 3 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:45:26 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:49:56 UTC 2024
+Setting entry_key to 3 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:49:57 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:50:56 UTC 2024
+Setting entry_key to 3 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:50:57 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:51:32 UTC 2024
+Setting entry_key to 7 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:51:34 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:52:51 UTC 2024
+Setting entry_key to 7 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:53:01 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:54:09 UTC 2024
+Setting entry_key to 3 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:54:11 UTC 2024
+Running hook_eval_script.sh at Tue May  7 03:55:36 UTC 2024
+Setting entry_key to 8 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 03:55:38 UTC 2024
+Running hook_eval_script.sh at Tue May  7 04:00:48 UTC 2024
+Setting entry_key to 3 in /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Executing deepeval test run /var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApp/deepeval/test_json.py
+Script completed at Tue May  7 04:00:50 UTC 2024

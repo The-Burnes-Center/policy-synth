@@ -1,3 +1,8 @@
+import fs from "fs/promises";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 import { PsBaseChatBot } from "@policysynth/api/base/chat/baseChatBot.js";
 import { PsRagRouter } from "./router.js";
 import { PsRagVectorSearch } from "./vectorSearch.js";
@@ -18,24 +23,25 @@ Instructions:
 - Use markdown to format your answers, always use formatting so the response comes alive to the user.
 - Keep your answers short and to the point except when the user asks for detail.
 `;
-    mainStreamingUserPrompt = (latestQuestion, context) => `<CONTEXT_TO_ANSWER_USERS_QUESTION_FROM>
+    // Needed for the evaluation in Deepval
+    deepevaltestCase = {
+        query: '',
+        actual_output: '',
+        retrieval_context: '',
+        timestamp: ''
+    };
+    userRequestsFilePath = "./webApps/deepeval/userRequestsFile.json";
+    fileUserReqests = {};
+    mainStreamingUserPrompt = (latestQuestion, context) => `<LATEST_USER_QUESTION>
+${latestQuestion}</LATEST_USER_QUESTION>
+
+<CONTEXT_TO_ANSWER_USERS_QUESTION_FROM>
 ${context}
 </CONTEXT_TO_ANSWER_USERS_QUESTION_FROM>
-
-<LATEST_USER_QUESTION>
-${latestQuestion}
-</LATEST_USER_QUESTION>
 
 Your thoughtful answer in markdown:
 `;
     sendSourceDocuments(document) {
-        document.forEach((d, i) => {
-            if (d.contentType.includes("json")) {
-                const refurls = JSON.parse(d.allReferencesWithUrls);
-                if (refurls.length > 0)
-                    document[i].url = refurls[0].url;
-            }
-        });
         const botMessage = {
             sender: "bot",
             type: "info",
@@ -51,6 +57,39 @@ Your thoughtful answer in markdown:
             console.error("No wsClientSocket found");
         }
     }
+    async streamWebSocketResponses(
+    //@ts-ignore
+    stream) {
+        console.log('in stream!~');
+        return new Promise(async (resolve, reject) => {
+            this.sendToClient("bot", "", "start");
+            try {
+                let botMessage = "";
+                for await (const part of stream) {
+                    this.sendToClient("bot", part.choices[0].delta.content);
+                    botMessage += part.choices[0].delta.content;
+                    this.addToExternalSolutionsMemoryCosts(part.choices[0].delta.content, "out");
+                    if (part.choices[0].finish_reason == "stop") {
+                        this.memory.chatLog.push({
+                            sender: "bot",
+                            message: botMessage,
+                        });
+                        await this.saveMemoryIfNeeded();
+                    }
+                }
+                this.deepevaltestCase.actual_output = botMessage;
+            }
+            catch (error) {
+                console.error(error);
+                this.sendToClient("bot", "There has been an error, please retry", "error");
+                reject();
+            }
+            finally {
+                this.sendToClient("bot", "", "end");
+            }
+            resolve();
+        });
+    }
     async rebootingDemocracyConversation(chatLog, dataLayout) {
         this.setChatLog(chatLog);
         const userLastMessage = chatLog[chatLog.length - 1].message;
@@ -62,9 +101,7 @@ Your thoughtful answer in markdown:
         const routingData = await router.getRoutingData(userLastMessage, dataLayout, JSON.stringify(chatLogWithoutLastUserMessage));
         this.sendAgentStart("Searching Rebooting Democracy...");
         const vectorSearch = new PsRagVectorSearch();
-        const searchContextRaw = await vectorSearch.search(userLastMessage, routingData, dataLayout);
-        const searchContext = await this.updateUrls(searchContextRaw);
-        console.log("search_context", searchContext);
+        const searchContext = await vectorSearch.search(userLastMessage, routingData, dataLayout);
         console.log("In Rebooting Democracy conversation");
         let messages = chatLogWithoutLastUserMessage.map((message) => {
             return {
@@ -83,7 +120,10 @@ Your thoughtful answer in markdown:
             content: this.mainStreamingUserPrompt(finalUserQuestionText, searchContext.responseText),
         };
         messages.push(userMessage);
-        console.log(`Messages to chatbot: ${JSON.stringify(messages, null, 2)}`);
+        // Eval vars need for evaluation
+        this.deepevaltestCase.query = userLastMessage;
+        this.deepevaltestCase.retrieval_context = `${searchContext.responseText}`;
+        // console.log(`Messages to chatbot: ${JSON.stringify(messages, null, 2)}`);
         try {
             const stream = await this.openaiClient.chat.completions.create({
                 model: "gpt-4-turbo",
@@ -94,33 +134,77 @@ Your thoughtful answer in markdown:
             });
             this.sendSourceDocuments(searchContext.documents);
             await this.streamWebSocketResponses(stream);
+            await this.loadFileUserReqests();
+            // Prepare the evaluation data Object
+            this.deepevaltestCase.timestamp = new Date().toISOString();
+            const entryIndex = Object.keys(this.fileUserReqests).length + 1;
+            console.log("fileUserReqests", this.fileUserReqests);
+            console.log("entryIndex: ", Object.keys(this.fileUserReqests), entryIndex);
+            console.log("before adding to the json");
+            this.fileUserReqests[entryIndex] = this.deepevaltestCase;
+            console.log("after adding to the json");
+            console.log(this.deepevaltestCase, "this.deepevaltestCase");
+            // Save evaluation Data in the file
+            console.log("before saving file json");
+            await this.saveFileUserData();
+            // run the Deepeval over the entries
+            console.log(this.deepevaltestCase, "after saving json and before sending webhook");
+            await this.deepEvaluateUserRequest(entryIndex);
+            console.log("after sending webhook");
         }
         catch (err) {
             console.error(`Error in Rebooting Democracy chatbot: ${err}`);
         }
     }
-    async updateUrls(searchContext) {
-        const documents = searchContext.documents;
-        let updatedResponseText = searchContext.responseText;
-        documents.forEach((document, index) => {
-            if (document.contentType && document.contentType.includes("json")) {
-                console.log("Original URL:", document.url);
-                // Parse the JSON string of allReferencesWithUrls
-                const refUrls = JSON.parse(document.allReferencesWithUrls);
-                // Check if there are any URLs available to update
-                if (refUrls.length > 0) {
-                    // Store the old URL before updating
-                    const oldUrl = document.url;
-                    // Update the document's URL to the first reference URL
-                    // documents[index].url = refUrls[0].url;
-                    // Replace the old URL in the responseText with the new URL
-                    updatedResponseText = updatedResponseText.replace(oldUrl, refUrls[0].url);
-                    console.log("Updated URL:", documents[index].url);
+    async loadFileUserReqests() {
+        try {
+            const userdataJson = await fs.readFile(this.userRequestsFilePath, "utf-8");
+            this.fileUserReqests = JSON.parse(userdataJson);
+        }
+        catch (error) {
+            // First, check if the error is an instance of Error and has a 'code' property
+            if (error instanceof Error && "code" in error) {
+                const readError = error; // Type assertion
+                if (readError.code === "ENOENT") {
+                    console.log("File does not exist, initializing empty metadata.");
+                    this.fileUserReqests = {}; // Initialize as empty object
+                }
+                else {
+                    // Handle other types of errors that might have occurred during readFile
+                    throw error;
                 }
             }
-        });
-        searchContext.responseText = updatedResponseText;
-        return searchContext;
+            else {
+                console.error("Error loading userReqeusts: " + error);
+                process.exit(1); // Consider if this is the desired behavior
+            }
+        }
+    }
+    async deepEvaluateUserRequest(entryIndex) {
+        // Path to the deepeval executable in the virtual environment
+        const webhookUrl = 'https://policy-synth-chat-dev.thegovlab.com/webhook/hooks/eval-users'; // Replace with your actual webhook URL
+        const data = {
+            entry_key: entryIndex,
+            message: 'message send'
+        };
+        try {
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' },
+            });
+            if (!response.ok) { // Check if response status code is not OK (200-299)
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            const responseData = await response.json(); // Assuming the server responds with JSON
+            console.log('Webhook triggered successfully:', responseData);
+        }
+        catch (error) {
+            console.error('Error triggering webhook:', error);
+        }
+    }
+    async saveFileUserData() {
+        await fs.writeFile(this.userRequestsFilePath, JSON.stringify(this.fileUserReqests, null, 2));
     }
 }
 //# sourceMappingURL=chatBot.js.map

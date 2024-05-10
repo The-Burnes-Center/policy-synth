@@ -22,7 +22,6 @@ COPY --chown=node:node ./webApi .
 
 # Copy your webApps directory to the WORKDIR
 #COPY --chown=node:node ./webApps ./webApps
-
 RUN ls . 
 
 # RUN ls webApps
