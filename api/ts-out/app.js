@@ -60,12 +60,12 @@ export class PolicySynthApiApp {
         console.log("Setting up static paths api original");
         const __filename = fileURLToPath(import.meta.url);
         const __dirname = dirname(__filename);
-        this.app.use(express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
-        this.app.use("/projects*", express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
-        this.app.use("/crt*", express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
-        this.app.use("/webResearch*", express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
-        this.app.use("/policies*", express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
-        this.app.use("/solutions*", express.static(path.join(__dirname, "../../webApps/policy-synth/dist")));
+        this.app.use(express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
+        this.app.use("/projects*", express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
+        this.app.use("/crt*", express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
+        this.app.use("/webResearch*", express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
+        this.app.use("/policies*", express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
+        this.app.use("/solutions*", express.static(path.join(__dirname, "../../../webApps/policy-synth/dist")));
     }
     initializeMiddlewares() {
         this.app.use(bodyParser.json());
