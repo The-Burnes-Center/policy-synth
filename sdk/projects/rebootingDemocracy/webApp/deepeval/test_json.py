@@ -14,7 +14,7 @@ with open('../webApp/deepeval/userRequestsFile.json', 'r') as file:
     data = json.load(file)
 
 # Assuming you want to process the entry with key "1"
-entry_key = "21"
+entry_key = "28"
 entry = data[entry_key]
 
 metricARM = AnswerRelevancyMetric(
