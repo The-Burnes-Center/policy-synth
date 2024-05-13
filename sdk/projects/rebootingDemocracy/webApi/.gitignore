@@ -13,6 +13,5 @@ webPagesCache/
 .env
 src/ingestion/cache
 hook_script.sh
-hooks.json
 webhook_logs/
 startWithEnv.sh

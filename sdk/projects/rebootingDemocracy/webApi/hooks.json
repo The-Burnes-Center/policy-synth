@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ingest-content",
+    "execute-command": "./hook_script.sh",
+    "pass-arguments-to-command": []
+  },
+  {
+    "id": "eval-users",
+    "execute-command": "./hook_eval_script.sh",
+    "pass-arguments-to-command": [
+{
+        "source": "payload",
+        "name": "entry_key"
+      }
+]
+  }
+]
