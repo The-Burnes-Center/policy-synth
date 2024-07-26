@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Load the JSON object
-const jobSpecsPath = path.join(__dirname, 'nj_titles_state_1_prompt.json');
+const jobSpecsPath = path.join(__dirname, 'nj_titles_state_prompt-1.json');
 let jobSpecs = JSON.parse(await fs.readFile(jobSpecsPath, 'utf-8'));
 
 async function getDegreeAnalysis(textContent, jobTitle, retries = 5) {
