@@ -80,6 +80,7 @@ The script implements rate limiting to avoid exceeding OpenAI's API limits. It p
 
 The script includes error handling for API rate limits and file reading errors. If a rate limit is encountered, it will retry the request after a specified delay.
 
+
 # JSON to CSV Converter
 
 This Node.js script converts a JSON file containing job specifications into a CSV file.
