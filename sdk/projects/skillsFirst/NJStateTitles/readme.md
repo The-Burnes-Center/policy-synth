@@ -80,7 +80,37 @@ The script implements rate limiting to avoid exceeding OpenAI's API limits. It p
 
 The script includes error handling for API rate limits and file reading errors. If a rate limit is encountered, it will retry the request after a specified delay.
 
-## Notes
+# JSON to CSV Converter
+
+This Node.js script converts a JSON file containing job specifications into a CSV file.
+
+## Prerequisites
+
+- Node.js (version 14 or later)
+- npm (Node Package Manager)
+
+## Installation
+
+1. Clone this repository or download the script.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install csv-writer` to install the required dependency.
+
+## Usage
+
+1. Ensure your JSON file is named `nj_titles_state_prompt-1.json` and is in the same directory as the script.
+2. Run the script using the command: `node json-to-csv.mjs`
+
+3. The script will generate a CSV file named `nj_titles_state_prompt-1.csv` in the same directory.
+
+## Features
+
+- Flattens nested 'degree analysis' object into top-level fields.
+- Creates a CSV with all fields from the JSON, including flattened 'degree analysis' fields.
+- Each JSON key becomes a column in the CSV.
+
+## Note
+
+Ensure you have write permissions in the directory where the script is located.
 
 * Ensure you have sufficient API credits and comply with OpenAI's usage policies.
 * The script may take a considerable amount of time to run, depending on the number of job descriptions to analyze.
