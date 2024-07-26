@@ -24,6 +24,7 @@ Replace `your_openai_api_key_here` with your actual OpenAI API key.
 ## File Structure
 
 Ensure you have the following file structure:
+```
 project_root/
 ├── script.mjs
 ├── nj_titles_state_prompt-1.json
@@ -32,6 +33,7 @@ project_root/
 │   ├── 52341.html
 │   └── ...
 └── .env
+```
 
 - `njStateTitleAnalysis.mjs`: The main script file
 - `nj_titles_state_prompt-1.json`: JSON file containing job specifications
