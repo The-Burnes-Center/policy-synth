@@ -2,5 +2,8 @@
 
 ## Run
 
-`node title.mjs`
+`node njStateTitleAnalysis.mjs`
+
+## PROMPT
+
 
