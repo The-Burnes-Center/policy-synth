@@ -26,7 +26,7 @@ Replace `your_openai_api_key_here` with your actual OpenAI API key.
 Ensure you have the following file structure:
 ```
 project_root/
-├── script.mjs
+├── njStateTitleAnalysis.mjs
 ├── nj_titles_state_prompt-1.json
 ├── html/
 │   ├── 21732.html
