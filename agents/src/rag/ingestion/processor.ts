@@ -6,8 +6,7 @@ import { HTTPResponse, Page, Browser } from "puppeteer";
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 
-import { PolicySynthAgentBase } from "../../baseAgent.js";
-import { IEngineConstants } from "../../constants.js";
+import { PolicySynthSimpleAgentBase } from "../../base/simpleAgent.js";
 import { DocumentCleanupAgent } from "./docCleanup.js";
 import { DocumentTreeSplitAgent } from "./docTreeSplitter.js";
 import { BaseIngestionAgent } from "./baseAgent.js";
@@ -22,7 +21,7 @@ import { PsRagDocumentVectorStore } from "../vectorstore/ragDocument.js";
 import { PsRagChunkVectorStore } from "../vectorstore/ragChunk.js";
 import { isArray } from "util";
 
-export abstract class IngestionAgentProcessor extends BaseIngestionAgent {
+export abstract class IngestionAgentAgent extends BaseIngestionAgent {
   dataLayoutPath: string;
   cachedFiles: string[] = [];
   fileMetadataPath: string = "./src/ingestion/cache/fileMetadata.json";
@@ -77,12 +76,12 @@ export abstract class IngestionAgentProcessor extends BaseIngestionAgent {
         this.logger.debug("Launching browser");
 
         const browserPage = await browser.newPage();
-        browserPage.setDefaultTimeout(IEngineConstants.webPageNavTimeout);
+        browserPage.setDefaultTimeout(30); //TODO: Set from agent config
         browserPage.setDefaultNavigationTimeout(
-          IEngineConstants.webPageNavTimeout
+          30  //TODO: Set from agent config
         );
 
-        await browserPage.setUserAgent(IEngineConstants.currentUserAgent);
+        //await browserPage.setUserAgent("");  //TODO: Set from agent config
 
         await this.downloadAndCache(
           this.dataLayout.documentUrls,
@@ -625,7 +624,7 @@ export abstract class IngestionAgentProcessor extends BaseIngestionAgent {
       if (!urlExists) {
         try {
           const page = await browser.newPage();
-          await page.setUserAgent(IEngineConstants.currentUserAgent);
+          await page.setUserAgent(PsConstants.currentUserAgent);
           await page.goto(newUrl, { waitUntil: ["load", "networkidle0"] });
 
           // Evaluate the title within the page context

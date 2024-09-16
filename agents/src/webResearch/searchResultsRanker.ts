@@ -1,39 +1,36 @@
 
-import { ChatOpenAI } from "@langchain/openai";
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { BasePairwiseRankingsProcessor } from "../basePairwiseRanking.js";
-import { IEngineConstants } from "../constants.js";
+import { SimplePairwiseRankingsAgent } from "../base/simplePairwiseRanking.js";
 
-export class SearchResultsRanker extends BasePairwiseRankingsProcessor {
+export class SearchResultsRanker extends SimplePairwiseRankingsAgent {
   searchQuestion: string | undefined;
 
   constructor(
-    memory: PsBaseMemoryData,
+    memory: PsSimpleAgentMemoryData,
     progressFunction: Function | undefined = undefined
   ) {
-    super(undefined as any, memory);
+    super(memory);
     this.progressFunction = progressFunction;
   }
 
   async voteOnPromptPair(
     index: number,
     promptPair: number[]
-  ): Promise<IEnginePairWiseVoteResults> {
+  ): Promise<PsPairWiseVoteResults> {
     const itemOneIndex = promptPair[0];
     const itemTwoIndex = promptPair[1];
 
     const itemOne = this.allItems![index]![
       itemOneIndex
-    ] as IEngineSearchResultItem;
+    ] as PsSearchResultItem;
     const itemTwo = this.allItems![index]![
       itemTwoIndex
-    ] as IEngineSearchResultItem;
+    ] as PsSearchResultItem;
 
     console.log(`itemOne: ${JSON.stringify(itemOne, null, 2)}`);
     console.log(`itemTwo: ${JSON.stringify(itemTwo, null, 2)}`);
 
     const messages = [
-      new SystemMessage(
+      this.createSystemMessage(
         `
         You are an AI expert trained to rank search results based on their relevance to the user research question.
 
@@ -45,7 +42,7 @@ export class SearchResultsRanker extends BasePairwiseRankingsProcessor {
         5. Let's think step by step.
         `
       ),
-      new HumanMessage(
+      this.createHumanMessage(
         `
         Research question: ${this.searchQuestion}
 
@@ -69,7 +66,6 @@ export class SearchResultsRanker extends BasePairwiseRankingsProcessor {
     return await this.getResultsFromLLM(
       index,
       "rank-search-results",
-      IEngineConstants.searchResultsRankingsModel,
       messages,
       itemOneIndex,
       itemTwoIndex
@@ -77,21 +73,14 @@ export class SearchResultsRanker extends BasePairwiseRankingsProcessor {
   }
 
   async rankSearchResults(
-    queriesToRank: IEngineSearchResultItem[],
+    queriesToRank: PsSearchResultItem[],
     searchQuestion: string,
     maxPrompts = 150
   ) {
     this.searchQuestion = searchQuestion;
 
-    this.chat = new ChatOpenAI({
-      temperature: IEngineConstants.searchQueryRankingsModel.temperature,
-      maxTokens: IEngineConstants.searchQueryRankingsModel.maxOutputTokens,
-      modelName: IEngineConstants.searchQueryRankingsModel.name,
-      verbose: IEngineConstants.searchQueryRankingsModel.verbose,
-    });
-
     this.setupRankingPrompts(-1, queriesToRank, maxPrompts, this.progressFunction);
     await this.performPairwiseRanking(-1);
-    return this.getOrderedListOfItems(-1) as IEngineSearchResultItem[];
+    return this.getOrderedListOfItems(-1) as PsSearchResultItem[];
   }
 }

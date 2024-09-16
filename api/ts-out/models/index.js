@@ -1,31 +1,45 @@
-import { Sequelize } from 'sequelize';
-import pg from 'pg';
-import safe from 'colors';
-import pgvector from 'pgvector/sequelize';
-pgvector.registerType(Sequelize);
-const logQuery = (query, options) => {
-    console.log(safe.bgGreen(new Date().toLocaleString()));
-    console.log(safe.bgYellow(options.bind));
-    console.log(safe.bgBlue(query));
-    return options;
+import { PsAgentConnectorClass } from "@policysynth/agents/dbModels/agentConnectorClass.js"; // Adjust the path as needed
+import { User } from "@policysynth/agents/dbModels/ypUser.js";
+import { Group } from "@policysynth/agents/dbModels/ypGroup.js";
+import { PsAgentClass } from "@policysynth/agents/dbModels/agentClass.js";
+import { PsAgentConnector } from "@policysynth/agents/dbModels/agentConnector.js";
+import { PsAgent } from "@policysynth/agents/dbModels/agent.js";
+import { PsExternalApiUsage } from "@policysynth/agents/dbModels/externalApiUsage.js";
+import { PsModelUsage } from "@policysynth/agents/dbModels/modelUsage.js";
+import { PsAgentAuditLog } from "@policysynth/agents/dbModels/agentAuditLog.js";
+import { PsAgentRegistry } from "@policysynth/agents/dbModels/agentRegistry.js";
+import { PsAiModel } from "@policysynth/agents/dbModels/aiModel.js";
+import { PsExternalApi } from "@policysynth/agents/dbModels/externalApis.js";
+import { sequelize } from "@policysynth/agents/dbModels/sequelize.js";
+const models = {
+    PsAgentClass,
+    User,
+    Group,
+    PsExternalApiUsage,
+    PsModelUsage,
+    PsAgentConnector,
+    PsAgent,
+    PsAgentAuditLog,
+    PsAgentConnectorClass,
+    PsAgentRegistry,
+    PsAiModel,
+    PsExternalApi
 };
-const sequelize = new Sequelize(process.env.DB_NAME, // DB name
-process.env.DB_USER, // username
-process.env.DB_PASS, // password
-{
-    host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT, 5432),
-    dialect: 'postgres',
-    dialectModule: pg,
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
+const initializeModels = async () => {
+    try {
+        console.log(`All Models Loaded Init`);
+        // Call associate method to set up associations
+        for (const modelName of Object.keys(models)) {
+            if (models[modelName].associate) {
+                await models[modelName].associate(models);
+            }
         }
-    },
-    logging: process.env.NODE_ENV !== 'production' ? logQuery : false,
-});
-export const models = {
-    sequelize
+        console.log("All models initialized successfully.");
+    }
+    catch (error) {
+        console.error("Error initializing models:", error);
+        process.exit(1); // Exit the process with failure
+    }
 };
+export { models, initializeModels, sequelize, PsAgentConnectorClass, User, Group, PsAgentClass, PsAgentConnector, PsAgent, PsExternalApiUsage, PsModelUsage, PsAgentAuditLog, PsAgentRegistry, PsAiModel, PsExternalApi };
 //# sourceMappingURL=index.js.map

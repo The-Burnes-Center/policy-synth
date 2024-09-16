@@ -1,13 +1,14 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "target": "es2022",
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
+    "rootDir": "src/",
     "outDir": "ts-out/",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
   "include": [
     "**/*.ts",

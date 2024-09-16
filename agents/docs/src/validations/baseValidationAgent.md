@@ -1,42 +1,42 @@
 # PsBaseValidationAgent
 
-This class extends `PolicySynthAgentBase` to provide base functionality for validation agents in the PolicySynth framework. It initializes with a name and options, sets up a ChatOpenAI instance for communication, and defines methods for executing the validation logic.
+The `PsBaseValidationAgent` class extends the `PolicySynthSimpleAgentBase` and is designed to handle validation tasks using a language model (LLM). It supports streaming responses via WebSocket and can chain multiple validation agents.
 
 ## Properties
 
-| Name     | Type                              | Description                                   |
-|----------|-----------------------------------|-----------------------------------------------|
-| name     | string                            | The name of the validation agent.             |
-| options  | PsBaseValidationAgentOptions      | Configuration options for the validation agent|
+| Name               | Type                          | Description                                                                 |
+|--------------------|-------------------------------|-----------------------------------------------------------------------------|
+| name               | string                        | The name of the validation agent.                                           |
+| options            | PsBaseValidationAgentOptions  | Configuration options for the validation agent.                             |
+| maxModelTokensOut  | number                        | Maximum number of tokens the model can output. Default is 4096.             |
+| modelTemperature   | number                        | Temperature setting for the model. Default is 0.0.                          |
 
 ## Methods
 
-| Name              | Parameters                        | Return Type                     | Description                                                                 |
-|-------------------|-----------------------------------|---------------------------------|-----------------------------------------------------------------------------|
-| constructor       | name: string, options: PsBaseValidationAgentOptions = {} | -                           | Initializes the validation agent with a name and optional configuration.    |
-| nextAgent         | agent: PsValidationAgent          | void                            | Setter for the next agent in the validation chain.                          |
-| renderPrompt      | -                                 | Promise<SystemMessage[] \| HumanMessage[]> | Prepares the prompt for the language model based on system and user messages.|
-| runValidationLLM  | -                                 | Promise<PsValidationAgentResult>| Runs the validation logic through a language model and returns the result.  |
-| execute           | -                                 | Promise<PsValidationAgentResult>| Orchestrates the validation process, including pre and post execution steps.|
-| beforeExecute     | -                                 | Promise<void>                   | Prepares the environment before executing the validation logic.             |
-| performExecute    | -                                 | Promise<PsValidationAgentResult>| Directly executes the validation logic.                                     |
-| afterExecute      | result: PsValidationAgentResult   | Promise<void>                   | Finalizes the execution process, including sending results over WebSocket.  |
+| Name             | Parameters                          | Return Type                | Description                                                                 |
+|------------------|-------------------------------------|----------------------------|-----------------------------------------------------------------------------|
+| constructor      | name: string, options: PsBaseValidationAgentOptions = {} | void                       | Initializes the validation agent with a name and options.                   |
+| set nextAgent    | agent: PsValidationAgent            | void                       | Sets the next agent in the validation chain.                                |
+| renderPrompt     |                                     | Promise<string[]>          | Renders the prompt for the LLM based on system and user messages.           |
+| runValidationLLM |                                     | Promise<PsValidationAgentResult> | Runs the validation using the LLM and returns the result.                   |
+| execute          |                                     | Promise<PsValidationAgentResult> | Executes the validation process, handling pre and post execution steps.     |
+| beforeExecute    |                                     | Promise<void>               | Prepares the agent for execution, including sending WebSocket messages.     |
+| performExecute   |                                     | Promise<PsValidationAgentResult> | Performs the main validation logic by calling the LLM.                      |
+| afterExecute     | result: PsValidationAgentResult     | Promise<void>               | Finalizes the execution, including sending WebSocket messages.              |
 
 ## Example
 
-```javascript
-// Example usage of PsBaseValidationAgent
+```typescript
 import { PsBaseValidationAgent } from '@policysynth/agents/validations/baseValidationAgent.js';
 
-const validationAgentOptions = {
-  webSocket: yourWebSocketInstance,
-  systemMessage: "Your system message here",
-  userMessage: "Your user message here",
+const options: PsBaseValidationAgentOptions = {
+  systemMessage: "System message example",
+  userMessage: "User message example",
+  webSocket: new WebSocket("ws://example.com"),
   disableStreaming: false,
-  // Other options as needed
 };
 
-const validationAgent = new PsBaseValidationAgent("YourAgentName", validationAgentOptions);
+const validationAgent = new PsBaseValidationAgent("ExampleAgent", options);
 
 validationAgent.execute().then(result => {
   console.log(result);
@@ -44,3 +44,5 @@ validationAgent.execute().then(result => {
   console.error(error);
 });
 ```
+
+This example demonstrates how to create and use the `PsBaseValidationAgent` with a WebSocket for streaming responses. The agent is configured with system and user messages and then executed to perform validation.

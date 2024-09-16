@@ -1,24 +1,15 @@
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { PolicySynthAgentBase } from "../baseAgent.js";
-import { IEngineConstants } from "../constants.js";
-import { ChatOpenAI } from "@langchain/openai";
+import { PolicySynthSimpleAgentBase } from "../base/simpleAgent.js";
 
-export class PsBaseValidationAgent extends PolicySynthAgentBase {
+export class PsBaseValidationAgent extends PolicySynthSimpleAgentBase {
   name: string;
   options: PsBaseValidationAgentOptions;
+  maxModelTokensOut = 4096;
+  modelTemperature = 0.0;
 
   constructor(name: string, options: PsBaseValidationAgentOptions = {}) {
     super();
     this.name = name;
     this.options = options;
-
-    this.chat = new ChatOpenAI({
-      temperature: IEngineConstants.validationModel.temperature,
-      maxTokens: IEngineConstants.validationModel.maxOutputTokens,
-      modelName: IEngineConstants.validationModel.name,
-      verbose: IEngineConstants.validationModel.verbose,
-      streaming: true
-   });
 
     const webSocket = this.options.webSocket;
 
@@ -50,8 +41,8 @@ export class PsBaseValidationAgent extends PolicySynthAgentBase {
   protected async renderPrompt() {
     if (this.options.systemMessage && this.options.userMessage) {
       return [
-        new SystemMessage(this.options.systemMessage),
-        new HumanMessage(this.options.userMessage),
+        this.createSystemMessage(this.options.systemMessage),
+        this.createHumanMessage(this.options.userMessage),
       ];
     } else {
       throw new Error("System or user message is undefined");
@@ -61,10 +52,8 @@ export class PsBaseValidationAgent extends PolicySynthAgentBase {
   async runValidationLLM(): Promise<PsValidationAgentResult> {
     const llmResponse = await this.callLLM(
       "validation-agent",
-      IEngineConstants.validationModel,
       await this.renderPrompt(),
       true,
-      false,
       120,
       this.options.streamingCallbacks
     );

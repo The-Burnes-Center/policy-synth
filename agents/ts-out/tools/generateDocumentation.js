@@ -1,8 +1,15 @@
-const renderSystemPrompt = (path) => `
+import * as glob from 'glob';
+const renderSystemPrompt = (path, allTypeDefsData) => `
 You are a detail oriented document generator that generates API documentation in the standard Markdown API documentation format.
 
-Important Instructions
+<AllTypeDefsUsedInProject>
+${allTypeDefsData}
+</AllTypeDefsUsedInProject>
+
+<ImportantInstructions>
 For Type use the Typescript definition like for currentMemory use PsBaseMemoryData | undefined
+
+Always keep in mind the AllTypeDefsUsedInProject without referencing them too much directly, only when needed to clarify.
 
 Do not output other sections.
 
@@ -37,6 +44,7 @@ Brief description of the class.
 
 ...example...
 \`\`\`
+</ImportantInstructions>
 `;
 const indexHeader = '# Policy Agents API Documentation\n\n';
 import * as fs from 'fs';
@@ -101,7 +109,7 @@ function generateMarkdownFromTree(tree, depth = 0, basePath = 'src/') {
         }
         else if (item.type === 'file') {
             // Prepend 'src/' to the basePath for files at the root, and adjust for subdirectories
-            const relativePath = `src/${basePath}${item.path}`;
+            const relativePath = `src/${basePath}${item.path}`.replace(/^src\/src\//, 'src/');
             markdown += `${indent}- [${item.name.replace('.md', '')}](${relativePath})\n`;
         }
     });
@@ -132,7 +140,13 @@ function findTSFiles(dir, fileList = []) {
 function generateChecksum(content) {
     return crypto.createHash('sha256').update(content).digest('hex');
 }
+function getAllTypeDefContents(rootDir) {
+    const typeDefFiles = glob.sync(path.join(rootDir, 'src', '**', '*.d.ts'));
+    return typeDefFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n\n');
+}
 async function generateDocumentation(fileList) {
+    const allTypedefContents = getAllTypeDefContents(rootDir);
+    console.log(`AllTypeDefs: ${allTypedefContents}`);
     for (const file of fileList) {
         const content = fs.readFileSync(file, 'utf8');
         const checksum = generateChecksum(content);
@@ -148,10 +162,10 @@ async function generateDocumentation(fileList) {
             try {
                 console.log(`${file}:`);
                 const completion = await openaiClient.chat.completions.create({
-                    model: "gpt-4-0125-preview",
+                    model: "gpt-4o",
                     temperature: 0.0,
                     max_tokens: 4095,
-                    messages: [{ role: "system", content: renderSystemPrompt(relativePath) }, { role: "user", content: content }],
+                    messages: [{ role: "system", content: renderSystemPrompt(relativePath, allTypedefContents) }, { role: "user", content: content }],
                 });
                 let docContent = completion.choices[0].message.content;
                 console.log(docContent);
