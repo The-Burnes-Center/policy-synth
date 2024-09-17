@@ -1,6 +1,6 @@
-import { OccupationalCategory, OccupationalSubCategory } from './types';
+import { OccupationalCategory} from './types';
 
-const occupationalCategories: OccupationalCategory[] = [
+export const occupationalCategories: OccupationalCategory[] = [
     {
       id: "occp_agriculture",
       mainCategory: "Agriculture, Fishery, Forestry and Related Occupations",
