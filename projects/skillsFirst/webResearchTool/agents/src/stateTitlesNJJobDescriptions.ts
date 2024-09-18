@@ -62,7 +62,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Account Finance Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -83,7 +83,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Account Finance Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -104,7 +104,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Account Finance Manager 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -251,7 +251,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Accounting Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -272,7 +272,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Acting Chair Civil Service Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -293,7 +293,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Acting Commissioner",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -314,7 +314,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Acting Section Chief Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -398,7 +398,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Aide Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1112,7 +1112,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative And Clerical Special Services (Administrative & Clerical Negotiation Eligible)",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1133,7 +1133,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Adm",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1154,7 +1154,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Cmu",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1175,7 +1175,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Itu",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1196,7 +1196,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Lbfo",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1217,7 +1217,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Oed",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1238,7 +1238,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Opi",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1259,7 +1259,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant - Osa",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1385,7 +1385,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant 2 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1448,7 +1448,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant 3 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1469,7 +1469,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1490,7 +1490,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant Olc",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1511,7 +1511,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1532,7 +1532,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Assistant Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1574,7 +1574,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1679,7 +1679,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Manager Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1700,7 +1700,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Operations Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1721,7 +1721,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Secretary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1742,7 +1742,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Secretary Senate Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1826,7 +1826,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1889,7 +1889,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Specialist 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -1952,7 +1952,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrative Specialist 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -2204,7 +2204,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrator 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -2225,7 +2225,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrator 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -2246,7 +2246,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Administrator 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -3443,7 +3443,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Agent Mvc",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -3737,7 +3737,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Aide To The Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -4451,7 +4451,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assignment Judge",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -4472,7 +4472,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assignment Secretary 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -4493,7 +4493,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assignment Secretary 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -4535,7 +4535,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -5375,7 +5375,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Counsel Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -5837,7 +5837,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -5858,7 +5858,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Adm",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -5921,7 +5921,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Budget And Fiscal Analysis Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -6362,7 +6362,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Of Constituent Relations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -6467,7 +6467,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Of Public Information",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -6488,7 +6488,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Office Of Public Information Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -6656,7 +6656,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director State University And Professional Schools",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -6698,7 +6698,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Director Student Loan Programs",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7181,7 +7181,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Executive Director For Policy And Planning Senate Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7286,7 +7286,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Federal Liaison Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7370,7 +7370,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Fiscal Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7391,7 +7391,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Fiscal Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7601,7 +7601,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Inspector",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7685,7 +7685,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Legislative Budget And Finance Officer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7706,7 +7706,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Legislative Counsel - Employment Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7727,7 +7727,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7748,7 +7748,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Legislative Counsel/Ethics Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7832,7 +7832,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Office Manager",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -7853,7 +7853,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8000,7 +8000,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Publications Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8105,7 +8105,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Research Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8126,7 +8126,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Research Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8147,7 +8147,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Research Director General Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8231,7 +8231,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Secretary Of State",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8357,7 +8357,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant State Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -8861,7 +8861,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant Supervisor Bureau Of Purchase",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9176,7 +9176,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To Executive Director General Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9218,7 +9218,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To The Director Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9239,7 +9239,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To The Executive Director/Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9260,7 +9260,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To The Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9281,7 +9281,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To The Legal Editor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9302,7 +9302,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Assistant To The Senate President",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9386,7 +9386,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9407,7 +9407,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Counsel Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9449,7 +9449,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9512,7 +9512,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Director Student Loan Programs",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9575,7 +9575,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Executive Director/Director Of Budget And Financial Analysis",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9596,7 +9596,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Fiscal Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9701,7 +9701,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Justice",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9722,7 +9722,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9743,7 +9743,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Manager Office Of Student Assistance",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9806,7 +9806,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Associate Research Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9911,7 +9911,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Attorney 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -9974,7 +9974,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Attorney 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10037,7 +10037,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Attorney 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10142,7 +10142,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Audit Processor Osa Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10478,7 +10478,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10604,7 +10604,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Bar Examiner",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10730,7 +10730,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Bill Processor I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10751,7 +10751,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Bill Processor Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -10772,7 +10772,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Bill Processor Iii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -11045,7 +11045,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Budget Analyst",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -11150,7 +11150,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Budget And Personnel Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -11171,7 +11171,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Budget Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -11423,7 +11423,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Building Service Coordinator Special Events State Capitoljoint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12032,7 +12032,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator 1 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12053,7 +12053,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator 2 State Capitol Joint Management Commission Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12074,7 +12074,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator 4 Mechanical Equipment State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12095,7 +12095,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator 4 State Capitol Joint Management Commission Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12116,7 +12116,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Administrative Housekeeping Bilingual In Spanish And English",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12137,7 +12137,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Exterior Maintenance And Landscapint State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12158,7 +12158,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Housekeeping 3 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12179,7 +12179,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Interior Operations Exterior Maint & Lndscp State Capitol Joint Mgmt Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12200,7 +12200,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Mechanical Equipment 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12221,7 +12221,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Mechanical Equipment 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12242,7 +12242,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Mechanical Equipment 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12263,7 +12263,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Coordinator Mechanical Equipment Trainee State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12284,7 +12284,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Operations Manager 1 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12305,7 +12305,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Operations Manager 4 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12326,7 +12326,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Senior Operations Manager 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12347,7 +12347,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Capitol Complex Senior Operations Manager 2 State Capitoljoint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12368,7 +12368,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Captain",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12389,7 +12389,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Captain",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12452,7 +12452,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Caretaker Drumthwacket",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12536,7 +12536,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12557,7 +12557,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Assistant 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12578,7 +12578,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Assistant 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12599,7 +12599,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Assistant 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12620,7 +12620,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12641,7 +12641,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Writer 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12662,7 +12662,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Writer 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12683,7 +12683,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Writer 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12704,7 +12704,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Ceremonial Resolution Writer 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12809,7 +12809,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chair Cannabis Regulatory Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12830,7 +12830,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chair Civil Service Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -12851,7 +12851,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chair/Chief Administrator Mvc",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -14069,7 +14069,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Bureau Of Risk Management",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -14111,7 +14111,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Bureau Of Training And Staff Development",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -14384,7 +14384,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -14867,7 +14867,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Justice Of The Supreme Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15266,7 +15266,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Of Financial/Operational Audit Section",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15329,7 +15329,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Of Informational Systems Audits",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15539,7 +15539,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Of Staff",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15581,7 +15581,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Of Staff/Executive Secretary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15602,7 +15602,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Of Unemployment Benefits",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -15749,7 +15749,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Office Of Program Development",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -16043,7 +16043,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief Public Safety Telecommunicator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -16337,7 +16337,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Chief State Office Of Poverty And The Law",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -17240,7 +17240,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Clerk Of The General Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -17912,7 +17912,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Colonel And Superintendent State Police",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -17975,7 +17975,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Commissioner State Athletic Control Board",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -17996,7 +17996,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Commissioner State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18017,7 +18017,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Commissions Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18038,7 +18038,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communication Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18059,7 +18059,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communication Systems Technician 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18080,7 +18080,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18101,7 +18101,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Director Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18122,7 +18122,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Director Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18143,7 +18143,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Engineer 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18164,7 +18164,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Manager",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18416,7 +18416,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Systems Technician 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18521,7 +18521,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Systems Technician 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18542,7 +18542,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Technician 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18563,7 +18563,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Technician 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18584,7 +18584,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Technician 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -18605,7 +18605,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Communications Technician 4 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -19340,7 +19340,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Confidential Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -19424,7 +19424,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Confidential Secretary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -19928,7 +19928,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Consultant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20012,7 +20012,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Consulting Physician Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20579,7 +20579,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Coordinator Of Administrative And Building Operations 2 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20600,7 +20600,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Coordinator Of Administrative And Building Operations 3 State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20642,7 +20642,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Coordinator Of Contractual Operations State Capitol Jointmanagement Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20747,7 +20747,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Coordinator Of Investigative Administration State Commission Of Investigations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20789,7 +20789,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Coordinator Of Secretarial Services And Bill Processing Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -20936,7 +20936,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Copy Center Supervisor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21251,7 +21251,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Counsel 1 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21272,7 +21272,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Counsel 2 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21293,7 +21293,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Counsel Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21314,7 +21314,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Counsel To The Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21335,7 +21335,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Counsel To The Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21461,7 +21461,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "County Medical Examiner",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21503,7 +21503,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "County School Business Administrator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21587,7 +21587,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Court Executive 1 B",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21881,7 +21881,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Court Services Officer 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -21923,7 +21923,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Court Services Officer 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -22007,7 +22007,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Court Services Officer 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -23225,7 +23225,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Customer Support Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -23267,7 +23267,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Data Analyst Osa Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -23330,7 +23330,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Data Control Specialist State Commission Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -23981,7 +23981,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Adjutant General",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24296,7 +24296,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Budget Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24317,7 +24317,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Chief Administrator Mvc",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24338,7 +24338,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Chief Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24359,7 +24359,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Chief Executive Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24422,7 +24422,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Chief Of Staff",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24464,7 +24464,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Chief Technology Officer - Oit",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24527,7 +24527,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Counsel 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24548,7 +24548,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Counsel 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24653,7 +24653,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director Alcoholic Beverage Control",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24674,7 +24674,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director Constituent Services",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24758,7 +24758,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director Division Of Gaming Enforcement",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24821,7 +24821,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director General Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24884,7 +24884,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director Of Communications",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24926,7 +24926,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director Of Operations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -24989,7 +24989,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Director State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25178,7 +25178,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25199,7 +25199,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director Of Operations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25220,7 +25220,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director Of Research",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25241,7 +25241,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25262,7 +25262,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25283,7 +25283,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Executive Director/Staff Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25304,7 +25304,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy General Counsel Public Employment Relations Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25430,7 +25430,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Public Defender 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25451,7 +25451,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy Public Defender 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25514,7 +25514,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Deputy State Treasurer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25766,7 +25766,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Computer Planning And Information Systems Office Of Student Assistance",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25808,7 +25808,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Division Of Alcoholic Beverage Control",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -25892,7 +25892,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Division Of Criminal Justice",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26375,7 +26375,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26501,7 +26501,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Administration",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26543,7 +26543,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Administration Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26564,7 +26564,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Administrative Services And Operations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26606,7 +26606,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Budget And Fiscal Analysis",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26627,7 +26627,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Budget And Fiscal Analysis General Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26648,7 +26648,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Central Management Unit Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26753,7 +26753,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Communications And Constituent Services",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26774,7 +26774,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Communications State Commission Of Investigations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26795,7 +26795,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Communications-Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26816,7 +26816,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Constituent Relations",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26900,7 +26900,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Human Resources Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -26942,7 +26942,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Information Technology Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27047,7 +27047,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Nursing Services 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27173,7 +27173,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Policy And Planning General Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27236,7 +27236,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Public Information Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27299,7 +27299,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Of Special Projects",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27362,7 +27362,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Office Of Administrative Law",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27488,7 +27488,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Office Of Homeland Security & Preparedness",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27530,7 +27530,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Director Planning And Research Higher Education Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27761,7 +27761,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "District Office Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27782,7 +27782,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "District Office Lease Administrator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27803,7 +27803,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "District Office Lease Compliance Administrator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27824,7 +27824,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "District Office Liaison Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27866,7 +27866,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "District Office Projects Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27950,7 +27950,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Division Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -27971,7 +27971,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Division Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -28307,7 +28307,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Economic Development Representative 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -28349,7 +28349,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Economic Development Representative 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -28391,7 +28391,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Economic Development Representative 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -28433,7 +28433,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Economic Development Representative 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -28475,7 +28475,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Editor/Proofreader Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -30911,7 +30911,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Environmental Specialist 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31373,7 +31373,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Assistant Joint Commission On The Public Schools",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31394,7 +31394,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Assistant Law Revision Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31415,7 +31415,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Assistant To The Executive Director",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31520,7 +31520,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31625,7 +31625,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director General Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31646,7 +31646,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director Joint Committee On The Public Schools",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31709,7 +31709,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director New Jersey Commission On Cancer Research",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31751,7 +31751,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director New Jersey Racing Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31793,7 +31793,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director Office Of Legislative Services",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31814,7 +31814,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31835,7 +31835,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director Senate Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31856,7 +31856,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Director State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31898,7 +31898,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Secretarial Assistant State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31919,7 +31919,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Secretary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -31982,7 +31982,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Executive Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32066,7 +32066,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32087,7 +32087,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32108,7 +32108,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32129,7 +32129,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32150,7 +32150,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32171,7 +32171,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Facilities Services Assistant Iii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32486,7 +32486,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Federal Liaison Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -32990,7 +32990,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Field Services Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33179,7 +33179,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Financial Specialist 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33473,7 +33473,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "First Assistant Legislative Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33494,7 +33494,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "First Assistant Medicaid Inspector General",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33536,7 +33536,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Fiscal Analyst State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33557,7 +33557,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Fiscal Associate 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33578,7 +33578,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Fiscal Associate Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -33599,7 +33599,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Fiscal Officer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -34901,7 +34901,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Government Representative 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -34922,7 +34922,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Government Representative 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -34943,7 +34943,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Government Representative 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35027,7 +35027,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35279,7 +35279,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader Communications Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35300,7 +35300,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader Development Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35321,7 +35321,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader Education And Training Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35342,7 +35342,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader Technical Services Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35363,7 +35363,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader/Education Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35384,7 +35384,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader/Engineer Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35405,7 +35405,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Group Leader/Programmer/Analyst Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -35636,7 +35636,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Head Building Service Coordinator Special Events State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -36056,7 +36056,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Head Processor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -36623,7 +36623,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Hearing Reporter/Transcriber Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -36644,7 +36644,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Hearing Unit And Program Coordinator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37379,7 +37379,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resource Specialist 1 Time And Leave Administration",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37400,7 +37400,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resource Specialist 2 Time And Leave Administration",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37421,7 +37421,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resources Administrator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37442,7 +37442,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resources Assistant 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37463,7 +37463,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resources Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37484,7 +37484,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resources Specialist 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37505,7 +37505,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Human Resources Specialist 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37862,7 +37862,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37883,7 +37883,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37904,7 +37904,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37925,7 +37925,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37946,7 +37946,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -37988,7 +37988,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38009,7 +38009,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38030,7 +38030,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38051,7 +38051,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38072,7 +38072,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38093,7 +38093,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38114,7 +38114,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38135,7 +38135,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38177,7 +38177,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38198,7 +38198,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38219,7 +38219,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38240,7 +38240,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38261,7 +38261,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38282,7 +38282,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38303,7 +38303,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38324,7 +38324,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38345,7 +38345,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Analyst 3 Confidential",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38408,7 +38408,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Information Technology Manager Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38492,7 +38492,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inspection Supervisor 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38513,7 +38513,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inspection Supervisor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38534,7 +38534,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inspector",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -38660,7 +38660,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inspector 2 N J Racing Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -39038,7 +39038,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Institutional Trade Instructor 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -39185,7 +39185,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Institutional Trade Instructor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -39311,7 +39311,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Institutional Trade Instructor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -39332,7 +39332,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Institutional Trade Instructor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -39500,7 +39500,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Institutional Trade Instructor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -40235,7 +40235,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Intermittent Emergency Response Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -40760,7 +40760,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inventory And Records Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -40781,7 +40781,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Inventory Control Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -40865,7 +40865,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Investigative Accountant 1 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -40886,7 +40886,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Investigative Accountant 2 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -41033,7 +41033,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Investigative Writer Sci",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42083,7 +42083,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Investigator Insurance Fraud Prevention Law And Public Safety",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42251,7 +42251,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Investigator Victims Of Crime Compensation Agency",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42440,7 +42440,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judge Of The Appellate Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42461,7 +42461,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judge Of The Superior Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42482,7 +42482,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judge Of The Tax Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42503,7 +42503,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judges Secretary 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42524,7 +42524,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judges Secretary 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -42545,7 +42545,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judges Secretary 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43196,7 +43196,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judiciary Coordinator 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43238,7 +43238,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Judiciary Coordinator 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43868,7 +43868,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Counsel And Training Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43889,7 +43889,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43910,7 +43910,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Fiscal Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43931,7 +43931,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Fiscal And Policy Data Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43952,7 +43952,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Processor I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43973,7 +43973,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Processor Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -43994,7 +43994,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Processor Iii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44015,7 +44015,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Processor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44036,7 +44036,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Public Information Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44057,7 +44057,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Public Information Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44078,7 +44078,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lead Research Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44204,7 +44204,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legal Editor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44225,7 +44225,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legal Intern State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44330,7 +44330,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legal Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44435,7 +44435,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legal Support Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44456,7 +44456,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legislative Administrator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44477,7 +44477,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legislative Budget And Finance Officer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44498,7 +44498,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44540,7 +44540,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Legislative Librarian Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44603,7 +44603,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Librarian 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44666,7 +44666,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Librarian/Archivist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44687,7 +44687,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Librarian/Digital And Information Resources Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44708,7 +44708,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Librarian/Research Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44750,7 +44750,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Library Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44960,7 +44960,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lieutenant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -44981,7 +44981,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lieutenant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45023,7 +45023,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lieutenant Colonel And Deputy Superintendent State Police",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45044,7 +45044,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Lieutenant Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45107,7 +45107,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Loading Dock Coordinator State Capitol Joint Management Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45233,7 +45233,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mail Services Associate Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45779,7 +45779,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 1 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45800,7 +45800,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 1 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -45848,6 +45848,9 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     notes: "",
     occupationalCategory: [],
     analysis: []
+  },
+  {
+    titleCode: "65256I",
     variant: "ROADWAY DESIGN",
     classOfService: "C",
     workWeek: "N4",
@@ -45923,7 +45926,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 1 Environmental Protection",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46280,7 +46283,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 1 Oal",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46322,7 +46325,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 1 Vocational Rehabilitation Services",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46448,7 +46451,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46469,7 +46472,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46490,7 +46493,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46511,7 +46514,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46532,7 +46535,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46553,7 +46556,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46574,7 +46577,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46595,7 +46598,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46616,7 +46619,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46658,7 +46661,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46679,7 +46682,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46700,7 +46703,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Department Of Transportation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -46973,7 +46976,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 2 Environmental Protection",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -47540,7 +47543,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 3 Fiscal Resources",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -47666,7 +47669,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 3 Waste Management",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -47771,7 +47774,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 4 Environmental Protection",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -47792,7 +47795,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager 4 Environmental Protection",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48107,7 +48110,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Construction Code Enforcement",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48128,7 +48131,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager District Office And Lease Compliance Services Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48149,7 +48152,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Facilities And Space Planning Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48191,7 +48194,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Financial & Purchasing Operations Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48233,7 +48236,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Human Resources Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48254,7 +48257,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Legislative Information & Bill Room",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48296,7 +48299,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Office Of Highway Safety",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48317,7 +48320,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48380,7 +48383,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Public Finance",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48422,7 +48425,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Training And Staff Development Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48464,7 +48467,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Manager Transportation Systems",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -48506,7 +48509,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Managing Actuary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49073,7 +49076,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Medicaid Inspector General",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49514,7 +49517,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Member Cannabis Regulatory Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49535,7 +49538,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Member Of Board Of Public Utility Commissioners",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49556,7 +49559,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Member Of Board Or Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49766,7 +49769,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Applications Analyst 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49787,7 +49790,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Applications Analyst 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49808,7 +49811,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Applications Analyst 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49829,7 +49832,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Applications Analyst 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49850,7 +49853,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Manager",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -49871,7 +49874,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Mis Support Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50375,7 +50378,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Administrator State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50396,7 +50399,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Engineer 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50417,7 +50420,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Engineer 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50438,7 +50441,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Engineer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50459,7 +50462,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50480,7 +50483,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50501,7 +50504,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50522,7 +50525,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician 4 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50543,7 +50546,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician Trainee 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50564,7 +50567,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician Trainee 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50585,7 +50588,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Network Technician Trainee Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50606,7 +50609,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Newspaper Clipping Service Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50627,7 +50630,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Newspaper Clipping Service/Library Projects Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50648,7 +50651,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Nomination And Legislative Counsel Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50669,7 +50672,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Nominations Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -50690,7 +50693,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Nominations Services Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -51131,7 +51134,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Office Manager",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -51152,7 +51155,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Office Services Associate Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -51404,7 +51407,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Operations Manager Information Technology Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -51593,7 +51596,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Paralegal Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -52160,7 +52163,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Personnel Administrator",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -52496,7 +52499,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Personnel Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53399,7 +53402,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Policy Advisor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53420,7 +53423,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Policy Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53504,7 +53507,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "President Board Of Public Utility Commissioners",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53525,7 +53528,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "President Of Board Or Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53546,7 +53549,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Presiding Judge Municipal Courts",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53567,7 +53570,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Presiding Judge Of The Superior Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53588,7 +53591,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Presiding Judge Of The Tax Court",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53609,7 +53612,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Press Secretary To Speaker",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53630,7 +53633,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Press Secretary To The Senate President",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53756,7 +53759,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Audit Processor Osa Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -53777,7 +53780,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54218,7 +54221,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54785,7 +54788,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Fiscal Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54827,7 +54830,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Human Resource Specialist Pension And Benefits",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54848,7 +54851,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Human Resource Specialist Time And Leave Administration",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54869,7 +54872,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Human Resources Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -54890,7 +54893,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Human Resources Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -55646,7 +55649,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Research Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -55667,7 +55670,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Revenue Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -55709,7 +55712,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -55772,7 +55775,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Principal Staff Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -56381,7 +56384,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Printing Operations Technician 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -56465,7 +56468,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Printing Operations Technician 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -56528,7 +56531,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Printing Operations Technician 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -56969,7 +56972,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Analyst & Operations Specialist 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -56990,7 +56993,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Analyst & Operations Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57179,7 +57182,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Compliance & Support Specialist 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57200,7 +57203,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Compliance & Support Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57221,7 +57224,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Compliance & Support Specialist 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57389,7 +57392,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Manager 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57410,7 +57413,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Manager 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57431,7 +57434,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Manager 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -57452,7 +57455,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Manager 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58754,7 +58757,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Supervisor 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58775,7 +58778,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Supervisor 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58796,7 +58799,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Supervisor 3",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58817,7 +58820,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Program Supervisor 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58964,7 +58967,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programmer Analyst 1 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -58985,7 +58988,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programmer Analyst 2 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59006,7 +59009,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programmer Analyst 3 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59027,7 +59030,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programmer Analyst 4 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59048,7 +59051,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programmer Analyst Trainee Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59069,7 +59072,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Programs Manager Opi Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59111,7 +59114,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Coordinator District Office & Capitol Complex Services",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59132,7 +59135,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Coordinator Iii Facility Services Supervisor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59153,7 +59156,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Coordinator Iii Warehouse/Furniture Installation Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59174,7 +59177,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Coordinator Warehouse/Furniture Installation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59195,7 +59198,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Designer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59615,7 +59618,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Manager Building Operations And Construction Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59720,7 +59723,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59741,7 +59744,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59762,7 +59765,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Specialist Mental Health Caseload",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59783,7 +59786,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Project Support Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59804,7 +59807,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Projects Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59825,7 +59828,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Projects Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59888,7 +59891,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Proofreader/Assistant To Supervisor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -59909,7 +59912,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Proofreader/Processor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60035,7 +60038,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Psychological Intern",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60056,7 +60059,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Advocate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60098,7 +60101,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Employment Relations Specialist 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60791,7 +60794,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Assistant 1/Customer Service Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60812,7 +60815,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Assistant 1/Legislative Information Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60833,7 +60836,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Assistant 2/Customer Service Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60854,7 +60857,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Assistant 2/Legislative Information Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60875,7 +60878,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60917,7 +60920,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Officer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60938,7 +60941,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Officer General Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60959,7 +60962,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -60980,7 +60983,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61001,7 +61004,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61022,7 +61025,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61043,7 +61046,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 4",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61064,7 +61067,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Public Information Specialist 4 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61190,7 +61193,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Publication And Digital Content Designer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61211,7 +61214,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Publications Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61253,7 +61256,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Purchasing/Fiscal Associate I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61274,7 +61277,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Purchasing/Fiscal Associate Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61295,7 +61298,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Purchasing/Fiscal Associate Iii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61337,7 +61340,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Quality Assurance Coordinator Dcf",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61463,7 +61466,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Quality Assurance Specialist Health Services Dcf",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -61988,7 +61991,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Real Estate Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -62219,7 +62222,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Receptionist State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -62324,7 +62327,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Records Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -62345,7 +62348,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Records Supervisor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63563,7 +63566,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Analyst",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63689,7 +63692,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Assistant Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63710,7 +63713,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Assistant Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63731,7 +63734,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Assistant To Senate Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63773,7 +63776,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Associate General Assembly Majority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63794,7 +63797,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Associate General Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63815,7 +63818,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Associate Senate Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63836,7 +63839,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Associate-Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63962,7 +63965,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Director General Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -63983,7 +63986,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Director General Assembly Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64004,7 +64007,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Research Director Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64550,7 +64553,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Resource Interpretive Specialist 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64613,7 +64616,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Resource Interpretive Specialist 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64739,7 +64742,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Revenue Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64760,7 +64763,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Revenue And Economic Policy Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -64781,7 +64784,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Revenue And Economic Policy Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65306,7 +65309,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretarial Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65432,7 +65435,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretarial Assistant 1 State Commission Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65516,7 +65519,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretarial Assistant 2 State Commission Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65621,7 +65624,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65705,7 +65708,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65726,7 +65729,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65768,7 +65771,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary Of State",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65789,7 +65792,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary Of The Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65810,7 +65813,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65831,7 +65834,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary To Assistant State Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65852,7 +65855,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary To Executive Director/Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65873,7 +65876,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary To The Assistant Director Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65894,7 +65897,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary To The Commissioner",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -65915,7 +65918,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Secretary-Receptionist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66230,7 +66233,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Section Chief Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66272,7 +66275,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Section Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66440,7 +66443,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Semi Senior Auditor Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66608,7 +66611,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Auditor I Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66629,7 +66632,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Auditor Ii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66650,7 +66653,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Auditor Iii Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -66797,7 +66800,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Budget And Fiscal Analyst",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67301,7 +67304,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Communications Specialist",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67511,7 +67514,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Counsel 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67532,7 +67535,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Counsel 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67553,7 +67556,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Counsel 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67616,7 +67619,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Deputy Communications Director For Technology",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67637,7 +67640,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior District Office Support Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -67700,7 +67703,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Editor/Proofreader Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68267,7 +68270,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal Analyst",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68288,7 +68291,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68309,7 +68312,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68330,7 +68333,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal Analyst 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68351,7 +68354,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal Associate Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68372,7 +68375,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Fiscal/District Office Associate, Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68519,7 +68522,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Hearing Reporter/Transcriber Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -68582,7 +68585,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Human Resources Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69065,7 +69068,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Legislative Counsel Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69317,7 +69320,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Newspaper Clipping Service Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69422,7 +69425,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Operations Manager Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69758,7 +69761,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Policy Advisor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69779,7 +69782,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Policy Advisor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69800,7 +69803,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Policy Analyst",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69926,7 +69929,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Programmer Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -69947,7 +69950,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Programmer Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70052,7 +70055,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Public Information Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70136,7 +70139,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Purchasing Associate Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70283,7 +70286,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Research Analyst 1 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70304,7 +70307,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Research Analyst 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70325,7 +70328,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Research Analyst 3 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70346,7 +70349,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Research Associate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70388,7 +70391,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Research Associate Senate Minority",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70409,7 +70412,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Resolution Writer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70472,7 +70475,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70493,7 +70496,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Section Secretary Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70598,7 +70601,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Staff Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70619,7 +70622,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Staff Associate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70640,7 +70643,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Staff Support Services Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -70955,7 +70958,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Trainer Dmu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71102,7 +71105,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Senior Writer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71165,7 +71168,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Sergeant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71186,7 +71189,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Sergeant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71207,7 +71210,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Sergeant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71249,7 +71252,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Sergeant First Class",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -71270,7 +71273,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Sergeant First Class",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72320,7 +72323,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Advisor To The Minority Leader",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72425,7 +72428,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Agent/Investigator 1 State Commission Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72446,7 +72449,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Agent/Investigator 2 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72467,7 +72470,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Agent/Investigator 3 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72488,7 +72491,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Assistant To Senate President",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72509,7 +72512,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Assistant To Speaker",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72530,7 +72533,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Assistant To The Governor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72551,7 +72554,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Counsel Policy & Planning",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72572,7 +72575,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Investigator Department Of Law And Public Safety",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72677,7 +72680,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Special Staff Officer 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72887,7 +72890,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Assistant 2 Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72908,7 +72911,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Assistant General Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72929,7 +72932,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -72950,7 +72953,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Associate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73097,7 +73100,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73118,7 +73121,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Fiscal And Budget Analyst Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73181,7 +73184,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Secretary Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73202,7 +73205,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Staff Support Services Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73328,7 +73331,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "State Auditor",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73454,7 +73457,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "State Comptroller",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73496,7 +73499,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "State Director Of Public Information",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73811,7 +73814,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "State Police Recruit",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -73937,7 +73940,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "State Treasurer",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -74147,7 +74150,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Student Assistant Intern Program",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -74168,7 +74171,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Student Financial Aid Administrator 1",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -74189,7 +74192,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Student Financial Aid Administrator 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -74504,7 +74507,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Superintendent 2 Corrections",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -74777,7 +74780,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Superintendent School For The Deaf",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -75953,7 +75956,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervising Hearing Reporter Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -76835,7 +76838,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervising Public Information Assistant",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -77780,7 +77783,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Bill Processing Unit Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78074,7 +78077,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Facilities Services And Copy Center Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78095,7 +78098,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Facilities Services Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78473,7 +78476,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Legislative Information & Bill Room",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78494,7 +78497,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Legislative Information And Bill Room (Libr) Assembly",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78515,7 +78518,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Legislative Information And Bill Room (Libr) Senate",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -78767,7 +78770,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Of Cash Management Treasury",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -79460,7 +79463,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Of Office Services Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -79523,7 +79526,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Of Operations Racing Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -79754,7 +79757,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Supervisor Of Staff Support Services Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -80405,7 +80408,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Support Services Assistant Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -81518,7 +81521,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Technical Assistant Public Employment Relations Commission",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -81686,7 +81689,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Technical Support Specialist 1 State Commission Of Investigation",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -81770,7 +81773,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Technical Support Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82169,7 +82172,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82190,7 +82193,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82211,7 +82214,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title 35 Hours",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82232,7 +82235,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title 40 Hours",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82253,7 +82256,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title Commerce",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82274,7 +82277,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title Commerce",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82295,7 +82298,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title Commerce",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82316,7 +82319,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title Commerce",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82337,7 +82340,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tentative Title Professional Case",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82715,7 +82718,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tour Program Coordinator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82736,7 +82739,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tour Program Educator Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82757,7 +82760,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tour Program Liaison Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82778,7 +82781,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Tour Specialist Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82904,7 +82907,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Trainer 1 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82925,7 +82928,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Trainer 2 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -82946,7 +82949,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Trainer 3 Itu Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -83009,7 +83012,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Training And Operations Anlayst/Counsel",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -83282,7 +83285,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Transitional Worker Support",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -83471,7 +83474,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Trooper 2",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
@@ -84332,7 +84335,7 @@ const stateTitlesNJJobDescriptions: JobDescription[] = [
     name: "Writer Ols",
     text: "",
     classification: EducationType.undefined, // Use any valid member from the EducationType enum
-    error"404 Not Found",
+    error: "404 Not Found",
     multiLevelJob: false,
     cscRevised: false,
     notes: "",
