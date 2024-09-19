@@ -41,7 +41,7 @@ export interface JobDescription {
   cscRevised?: boolean;
   notes?: string;
   occupationalCategory: OccupationalCategory;
-  degreeAnalysis: JobDescriptionAnalysis;
+  degreeAnalysis: JobDescriptionDegreeAnalysis;
 }
 /**
 * Extends memory data to include job descriptions.
@@ -54,7 +54,7 @@ interface JobDescriptionMemoryData extends PsAgentMemoryData {
 /**
 * Contains the analysis results of a job description.
 */
-interface JobDescriptionAnalysis {
+interface JobDescriptionDegreeAnalysis {
   needsCollegeDegree: boolean; 
   // From the first set of questions: "Seeking to determine whether the job description includes a discussion of a college degree."
   
@@ -145,7 +145,7 @@ type JobEducationRequirementTypes =
 /**
 * Enumeration of classification types based on the Determination Steps.
 */
-type JobClassification =
+type JobDegreeClassification =
 | "Type1" // "high school degree", "high school degree completion"
 | "Type2" // "college coursework", "study at a college", "study at a university"
 | "Type3" // "associate's degree", etc.
@@ -195,10 +195,10 @@ export interface OccupationalSubCategory {
 //     text: string;
 //     classification: string;
 //     url?: string;
-//     analysis: JobDescriptionAnalysis;
+//     analysis: JobDescriptionDegreeAnalysis;
 //   }
 
-//   interface JobDescriptionAnalysis {
+//   interface JobDescriptionDegreeAnalysis {
 //     needsCollegeDegree: boolean;
 //     educationRequirements: JobEducationRequirementTypes[];
 //   }
