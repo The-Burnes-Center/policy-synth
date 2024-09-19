@@ -41,7 +41,7 @@ export interface JobDescription {
   cscRevised?: boolean;
   notes?: string;
   occupationalCategory: OccupationalCategory;
-  analysis: JobDescriptionAnalysis;
+  degreeAnalysis: JobDescriptionAnalysis;
 }
 /**
 * Extends memory data to include job descriptions.
