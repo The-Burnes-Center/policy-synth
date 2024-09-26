@@ -196,7 +196,7 @@ Your thoughtful answer in markdown:
 
     try {
       const stream = await this.openaiClient.chat.completions.create({
-        model: "gpt-4-turbo",
+        model: "gpt-4o",
         messages,
         max_tokens: 4000,
         temperature: 0.0,

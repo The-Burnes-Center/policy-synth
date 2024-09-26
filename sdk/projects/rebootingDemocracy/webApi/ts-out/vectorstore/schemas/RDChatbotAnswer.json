@@ -1,0 +1,105 @@
+{
+  "class": "RDChatbotAnswer",
+  "description": "A chatbot answer with evaluation results",
+  "vectorIndexType": "hnsw",
+  "vectorizer": "text2vec-openai",
+  "moduleConfig": {
+    "text2vec-openai": {
+      "model": "text-embedding-3-large",
+      "vectorizeClassName": true
+    }
+  },
+  "properties": [
+    {
+      "name": "question",
+      "description": "The user's question",
+      "dataType": ["text"],
+      "moduleConfig": {
+        "text2vec-openai": {
+          "skip": false,
+          "vectorizePropertyName": false
+        }
+      }
+    },
+    {
+      "name": "answer",
+      "description": "The chatbot's answer",
+      "dataType": ["text"],
+      "moduleConfig": {
+        "text2vec-openai": {
+          "skip": false,
+          "vectorizePropertyName": false
+        }
+      }
+    },
+    {
+      "name": "timestamp",
+      "description": "Timestamp of the answer",
+      "dataType": ["date"]
+    },
+    {
+      "name": "sourceDocuments",
+      "description": "References to source RagDocuments",
+      "dataType": ["RagDocument"]
+    },
+    {
+      "name": "retrievalContext",
+      "description": "Context used for retrieval",
+      "dataType": ["text"],
+      "moduleConfig": {
+        "text2vec-openai": {
+          "skip": true
+        }
+      }
+    },
+    {
+      "name": "evaluationResults",
+      "description": "Evaluation results",
+      "dataType": ["object"],
+      "nestedProperties": [
+        {
+          "name": "ContextualRelevancy",
+          "dataType": ["object"],
+          "nestedProperties": [
+            {
+              "name": "score",
+              "dataType": ["number"]
+            },
+            {
+              "name": "reason",
+              "dataType": ["text"]
+            }
+          ]
+        },
+        {
+          "name": "Faithfulness",
+          "dataType": ["object"],
+          "nestedProperties": [
+            {
+              "name": "score",
+              "dataType": ["number"]
+            },
+            {
+              "name": "reason",
+              "dataType": ["text"]
+            }
+          ]
+        },
+        {
+          "name": "AnswerRelevancyMetric",
+          "dataType": ["object"],
+          "nestedProperties": [
+            {
+              "name": "score",
+              "dataType": ["number"]
+            },
+            {
+              "name": "reason",
+              "dataType": ["text"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

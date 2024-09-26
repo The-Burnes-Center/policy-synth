@@ -1,8 +1,14 @@
 [
   {
     "id": "ingest-content",
-    "execute-command": "./hook_script.sh",
-    "pass-arguments-to-command": []
+    "execute-command": "/var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApi/hook_script.sh",
+"command-working-directory":"/var/www/policy-synth-chat-v1/sdk/projects/rebootingDemocracy/webApi",
+  "pass-arguments-to-command": [
+    {
+      "source": "entire-payload",
+      "name": "payload"
+    }
+  ]
   },
   {
     "id": "eval-users",

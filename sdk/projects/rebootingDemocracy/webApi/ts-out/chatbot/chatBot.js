@@ -126,7 +126,7 @@ Your thoughtful answer in markdown:
         // console.log(`Messages to chatbot: ${JSON.stringify(messages, null, 2)}`);
         try {
             const stream = await this.openaiClient.chat.completions.create({
-                model: "gpt-4-turbo",
+                model: "gpt-4o",
                 messages,
                 max_tokens: 4000,
                 temperature: 0.0,
