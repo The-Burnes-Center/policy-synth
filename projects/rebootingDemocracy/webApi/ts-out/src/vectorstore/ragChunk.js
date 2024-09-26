@@ -1,10 +1,10 @@
 import weaviate from "weaviate-ts-client";
-import { PolicySynthScAgentBase } from "@policysynth/agents//baseAgent.js";
+import { PolicySynthSimpleAgentBase } from "@policysynth/agents//baseAgent.js";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-export class PsRagChunkVectorStore extends PolicySynthScAgentBase {
+export class PsRagChunkVectorStore extends PolicySynthSimpleAgentBase {
     static allFieldsToExtract = "title chunkIndex chapterIndex mainExternalUrlFound  \
          shortSummary fullSummary \
       relevanceEloRating qualityEloRating substanceEloRating uncompressedContent \
@@ -13,10 +13,80 @@ export class PsRagChunkVectorStore extends PolicySynthScAgentBase {
       category5EloRating, category6EloRating, category7EloRating, category8EloRating\
       category9EloRating, category10EloRating\
      _additional { id, distance, certainty }";
+    static weaviateKey = PsRagChunkVectorStore.getWeaviateKey();
     static client = weaviate.client({
         scheme: process.env.WEAVIATE_HTTP_SCHEME || "http",
         host: process.env.WEAVIATE_HOST || "localhost:8080",
+        apiKey: new weaviate.ApiKey(PsRagChunkVectorStore.weaviateKey),
+        headers: {
+            'X-OpenAI-Api-Key': process.env.OPENAI_API_KEY,
+        },
     });
+    static getWeaviateKey() {
+        const key = process.env.WEAVIATE_APIKEY || ""; // Provide a default empty string if the key is undefined
+        console.log(`Weaviate API Key: ${key ? 'Retrieved successfully' : 'Not found or is empty'}`);
+        return key;
+    }
+    async getChunksByDocumentId(documentId) {
+        const query = `
+      {
+        Get {
+          RagDocumentChunk(
+            where: {
+              path: ["inDocument", "_id"]
+              operator: Equal
+              valueString: "${documentId}"
+            }
+            limit: 100
+          ) {
+            title
+            _additional {
+              id
+            }
+          }
+        }
+      }
+      `;
+        try {
+            const response = await PsRagChunkVectorStore.client.graphql
+                .raw()
+                .withQuery(query)
+                .do();
+            return response;
+        }
+        catch (err) {
+            console.error(`Error fetching chunks by document ID: ${err}`);
+            throw err;
+        }
+    }
+    async deleteChunksByIds(chunkIds, dryRun = false) {
+        try {
+            const response = await PsRagChunkVectorStore.client.batch
+                .objectsBatchDeleter()
+                .withClassName("RagDocumentChunk")
+                .withWhere({
+                path: ['id'],
+                operator: 'ContainsAny',
+                valueTextArray: chunkIds,
+            })
+                .withDryRun(dryRun)
+                .withOutput('verbose')
+                .do();
+            console.log(`Deletion response: ${JSON.stringify(response, null, 2)}`);
+            if (dryRun) {
+                console.log(`Dry run complete. Objects that would be deleted:`);
+                response.matchingObjects.forEach((obj) => {
+                    console.log(`- ID: ${obj.id}, Status: ${obj.status}`);
+                });
+            }
+            else {
+                console.log(`Successfully deleted chunks with IDs: ${chunkIds.join(', ')}`);
+            }
+        }
+        catch (err) {
+            console.error(`Error deleting chunks:`, err);
+        }
+    }
     async addSchema() {
         let classObj;
         try {
@@ -251,3 +321,4 @@ export class PsRagChunkVectorStore extends PolicySynthScAgentBase {
         return results;
     }
 }
+//# sourceMappingURL=ragChunk.js.map

@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { BaseController } from "@policysynth/api/controllers/baseController.js";
 import express from "express";
 import WebSocket from "ws";

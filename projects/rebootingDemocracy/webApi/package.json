@@ -10,6 +10,7 @@
   "type": "module",
   "dependencies": {
     "@policysynth/api": "^1.2.2",
+    "dotenv": "^16.4.5",
     "mammoth": "^1.7.0",
     "puppeteer": "^22.4.0",
     "xlsx": "^0.18.5"

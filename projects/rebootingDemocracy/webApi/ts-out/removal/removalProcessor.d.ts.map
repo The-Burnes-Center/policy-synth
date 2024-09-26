@@ -1,0 +1,1 @@
+{"version":3,"file":"removalProcessor.d.ts","sourceRoot":"","sources":["../../src/removal/removalProcessor.ts"],"names":[],"mappings":"AAIA,qBAAa,mCAAmC;IAC9C,OAAO,CAAC,WAAW,CAAS;IAC5B,OAAO,CAAC,cAAc,CAAS;IAE/B,OAAO,CAAC,aAAa,CAA2B;IAChD,OAAO,CAAC,UAAU,CAAwB;;IAUpC,uBAAuB,CAC3B,WAAW,EAAE,MAAM,EACnB,MAAM,GAAE,OAAe,GACtB,OAAO,CAAC,IAAI,CAAC;CAyCjB"}

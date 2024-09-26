@@ -1,5 +1,5 @@
-import { IngestionAgentProcessor } from "./agentProcessor.js";
-export class RebootingDemocracyIngestionProcessor extends IngestionAgentProcessor {
+import { RebootingDemocracyIngestionProcessor } from "./agentProcessor.js";
+export class RebootingDemocracyIngestionProcessorWorker extends RebootingDemocracyIngestionProcessor {
 }
 // Asynchronous main function to run the script
 async function main() {
@@ -7,6 +7,7 @@ async function main() {
         const processor = new RebootingDemocracyIngestionProcessor();
         await processor.processDataLayout();
         console.log("Data layout processing completed successfully.");
+        process.exit(0);
     }
     catch (error) {
         console.error("Failed to process data layout:", error);
@@ -14,3 +15,4 @@ async function main() {
 }
 // Invoke the main function to start the script
 main();
+//# sourceMappingURL=ingestContent.js.map
