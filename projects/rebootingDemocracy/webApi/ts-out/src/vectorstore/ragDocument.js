@@ -1,21 +1,32 @@
 import weaviate from "weaviate-ts-client";
-import { PolicySynthScAgentBase } from "@policysynth/agents//baseAgent.js";
+import { PolicySynthAgentBase } from "@policysynth/agents//baseAgent.js";
 import { PsConstants } from "@policysynth/agents/constants.js";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
+export class PsRagDocumentVectorStore extends PolicySynthAgentBase {
     static allFieldsToExtract = "title url lastModified size \
        description shortDescription fullDescriptionOfAllContents \
       compressedFullDescriptionOfAllContents \
       contentType allReferencesWithUrls allOtherReferences \
       allImageUrls  documentMetaData\
      _additional { id, distance, confidence }";
+    static urlField = "url";
+    static weaviateKey = PsRagDocumentVectorStore.getWeaviateKey();
     static client = weaviate.client({
         scheme: process.env.WEAVIATE_HTTP_SCHEME || "http",
         host: process.env.WEAVIATE_HOST || "localhost:8080",
+        apiKey: new weaviate.ApiKey(PsRagDocumentVectorStore.weaviateKey),
+        headers: {
+            'X-OpenAI-Api-Key': process.env.OPENAI_API_KEY,
+        },
     });
+    static getWeaviateKey() {
+        const key = process.env.WEAVIATE_APIKEY || ""; // Provide a default empty string if the key is undefined
+        console.log(`Weaviate API Key: ${key ? 'Retrieved successfully' : 'Not found or is empty'}`);
+        return key;
+    }
     roughFastWordTokenRatio = 1.25;
     maxChunkTokenLength = 500;
     minQualityEloRatingForChunk = 920;
@@ -64,6 +75,25 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
         }
         catch (err) {
             console.error(`Error creating schema: ${err}`);
+        }
+    }
+    async deleteDocumentById(documentId) {
+        try {
+            const response = await PsRagDocumentVectorStore.client.data
+                .deleter()
+                .withClassName("RagDocument")
+                .withId(documentId)
+                .do();
+            if (response.errors) {
+                console.error(`Error deleting document: ${response.errors}`);
+                return false;
+            }
+            console.log(`Successfully deleted document with ID: ${documentId}`);
+            return true;
+        }
+        catch (err) {
+            console.error(`Exception while deleting document: ${err}`);
+            return false;
         }
     }
     async testQuery() {
@@ -170,8 +200,57 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
         }
         return results;
     }
+    async searchDocumentsByUrl(docUrl) {
+        const where = [
+            {
+                operator: "Or",
+                operands: [
+                    {
+                        operator: "Equal",
+                        path: ["url"],
+                        valueString: docUrl
+                    }
+                ]
+            }
+        ];
+        try {
+            let results = await PsRagDocumentVectorStore.client.graphql
+                .get()
+                .withClassName("RagDocument")
+                .withWhere(where[0])
+                .withFields(PsRagDocumentVectorStore.urlField)
+                .do();
+            // Check if results are empty or null and handle accordingly
+            if (!results) {
+                console.log('No documents found. Database might be empty for this query.');
+                // Handle the empty db scenario here, such as continuing with your process
+                return null; // Or however you wish to handle this scenario
+            }
+            return results;
+        }
+        catch (err) {
+            // Handle different errors differently, e.g., schema errors, network errors, etc.
+            console.error('Error while querying documents:', err);
+            throw err;
+        }
+    }
+    async mergeUniqueById(arr1, arr2) {
+        // Helper function to filter duplicates within an array
+        const mergedArray = [...arr1, ...arr2];
+        // Step 2: Filter out duplicates from the merged array
+        const unique = new Map();
+        mergedArray.forEach(item => {
+            const id = item._additional?.id;
+            if (id) {
+                unique.set(id, item);
+            }
+        });
+        // Convert the Map back into an array
+        return Array.from(unique.values());
+    }
     async searchChunksWithReferences(query) {
-        let results;
+        let resultsNearText;
+        let resultsBm25;
         const where = [
             {
                 path: ['compressedContent'],
@@ -179,17 +258,62 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
                 valueBoolean: false
             }
         ];
-        try {
-            results = await PsRagDocumentVectorStore.client.graphql
-                .get()
-                .withClassName("RagDocumentChunk")
-                .withNearText({ concepts: [query] })
-                .withLimit(12)
-                .withWhere({
-                operator: "And",
-                operands: where,
-            })
-                .withFields(`
+        const searchFields = `
+    title
+    chunkIndex
+    chapterIndex
+    mainExternalUrlFound
+    shortSummary
+    fullSummary
+    relevanceEloRating
+    qualityEloRating
+    substanceEloRating
+    compressedContent
+    _additional { id, distance, certainty }
+
+    inDocument {
+      ... on RagDocument {
+        title
+        url
+        description
+        shortDescription
+        compressedFullDescriptionOfAllContents
+        relevanceEloRating
+        qualityEloRating
+        substanceEloRating
+        allReferencesWithUrls
+        contentType
+      }
+    }
+
+    mostRelevantSiblingChunks {
+      ... on RagDocumentChunk {
+        title
+        chapterIndex
+        chunkIndex
+        fullSummary
+        relevanceEloRating
+        qualityEloRating
+        substanceEloRating
+        compressedContent
+      }
+    }
+
+    allSiblingChunks {
+      ... on RagDocumentChunk {
+        title
+        chapterIndex
+        chunkIndex
+        fullSummary
+        relevanceEloRating
+        qualityEloRating
+        substanceEloRating
+        compressedContent
+      }
+    }
+
+    inChunk {
+      ... on RagDocumentChunk {
         title
         chunkIndex
         chapterIndex
@@ -198,49 +322,15 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
         fullSummary
         relevanceEloRating
         qualityEloRating
-        substanceEloRating
         compressedContent
-        _additional { id, distance, certainty }
-
-        inDocument {
-          ... on RagDocument {
-            title
-            url
-            description
-            shortDescription
-            compressedFullDescriptionOfAllContents
-            relevanceEloRating
-            qualityEloRating
-            substanceEloRating
-          }
-        }
-
-        mostRelevantSiblingChunks {
-          ... on RagDocumentChunk {
-            title
-            chunkIndex
-            chapterIndex
-            mainExternalUrlFound
-            shortSummary
-            fullSummary
-            relevanceEloRating
-            qualityEloRating
-            substanceEloRating
-            compressedContent
-          }
-        }
 
         inChunk {
           ... on RagDocumentChunk {
             title
             chunkIndex
             chapterIndex
-            mainExternalUrlFound
             shortSummary
             fullSummary
-            relevanceEloRating
-            qualityEloRating
-            substanceEloRating
             compressedContent
 
             inChunk {
@@ -269,17 +359,6 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
                         shortSummary
                         fullSummary
                         compressedContent
-
-                        inChunk {
-                          ... on RagDocumentChunk {
-                            title
-                            chunkIndex
-                            chapterIndex
-                            shortSummary
-                            fullSummary
-                            compressedContent
-                          }
-                        }
                       }
                     }
                   }
@@ -288,180 +367,39 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
             }
           }
         }
-      `)
-                .do();
-            //console.log(JSON.stringify(results.data.Get.RagDocumentChunk, null, 2));
-            return results.data.Get.RagDocumentChunk;
-            //return Array.from(ragDocumentsMap.values());
+      }
+    }
+  `;
+        try {
+            // Start both promises simultaneously and wait for all to finish
+            const [resultsNearText, resultsBm25] = await Promise.all([
+                PsRagDocumentVectorStore.client.graphql
+                    .get()
+                    .withClassName("RagDocumentChunk")
+                    .withNearText({ concepts: [query] })
+                    .withLimit(12)
+                    .withWhere({
+                    operator: "And",
+                    operands: where,
+                })
+                    .withFields(searchFields)
+                    .do(),
+                PsRagDocumentVectorStore.client.graphql
+                    .get()
+                    .withClassName("RagDocumentChunk")
+                    .withBm25({ 'query': query })
+                    .withLimit(2)
+                    .withFields(searchFields)
+                    .do()
+            ]);
+            // Assuming mergeUniqueById is already defined and can be used here directly
+            const resultsCombined = await this.mergeUniqueById(resultsBm25.data.Get.RagDocumentChunk, resultsNearText.data.Get.RagDocumentChunk);
+            return resultsCombined;
         }
         catch (err) {
             console.error(err);
             throw err;
         }
     }
-    async searchChunksWithReferencesTEST(query) {
-        let results;
-        try {
-            results = await PsRagDocumentVectorStore.client.graphql
-                .get()
-                .withClassName("RagDocumentChunk")
-                .withNearText({ concepts: [query] })
-                .withLimit(15)
-                .withFields(`
-        title
-        chunkIndex
-        chapterIndex
-        mainExternalUrlFound
-        shortSummary
-        fullSummary
-        relevanceEloRating
-        qualityEloRating
-        substanceEloRating
-        uncompressedContent
-        compressedContent
-        metaDataFields
-        metaData
-        allSiblingChunks {
-          ... on RagDocumentChunk {
-            title
-            chunkIndex
-            chapterIndex
-            mainExternalUrlFound
-            shortSummary
-            fullSummary
-            relevanceEloRating
-            qualityEloRating
-            substanceEloRating
-            uncompressedContent
-            compressedContent
-            metaDataFields
-            metaData
-          }
-        }
-        inChunk {
-          ... on RagDocumentChunk {
-            title
-            chunkIndex
-            chapterIndex
-            mainExternalUrlFound
-            shortSummary
-            fullSummary
-            relevanceEloRating
-            qualityEloRating
-            substanceEloRating
-            uncompressedContent
-            compressedContent
-            metaDataFields
-            metaData
-
-            inChunk {
-              ... on RagDocumentChunk {
-                title
-                chunkIndex
-                chapterIndex
-                mainExternalUrlFound
-                shortSummary
-                fullSummary
-                relevanceEloRating
-                qualityEloRating
-                substanceEloRating
-                uncompressedContent
-                compressedContent
-                metaDataFields
-                metaData
-                inChunk {
-                  ... on RagDocumentChunk {
-                    title
-                    chunkIndex
-                    chapterIndex
-                    mainExternalUrlFound
-                    shortSummary
-                    fullSummary
-                    relevanceEloRating
-                    qualityEloRating
-                    substanceEloRating
-                    uncompressedContent
-                    compressedContent
-                    metaDataFields
-                    metaData
-
-                    inChunk {
-                      ... on RagDocumentChunk {
-                        title
-                        chunkIndex
-                        chapterIndex
-                        mainExternalUrlFound
-                        shortSummary
-                        fullSummary
-                        relevanceEloRating
-                        qualityEloRating
-                        substanceEloRating
-                        uncompressedContent
-                        compressedContent
-                        metaDataFields
-                        metaData
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      `)
-                .do();
-            const ragDocumentsMap = new Map();
-            console.log(`Got ${results.data.Get.RagDocumentChunk.length} chunks`);
-            //console.log(JSON.stringify(results.data.Get.RagDocumentChunk, null, 2));
-            for (const chunk of results.data.Get.RagDocumentChunk) {
-                if (chunk.inDocument) {
-                    chunk.inDocument.chunks = [];
-                    ragDocumentsMap.set(chunk.inDocument.id, chunk.inDocument);
-                }
-            }
-            // Process each RagDocument with its associated chunks
-            for (const chunk of results.data.Get.RagDocumentChunk) {
-                if (chunk.inDocument) {
-                    const ragDocument = ragDocumentsMap.get(chunk.inDocument.id);
-                    if (ragDocument) {
-                        const flattenedChunks = [];
-                        const alwaysAddAllSiblings = true;
-                        const collectRelevantChunks = (chunk, tokenCountText) => {
-                            flattenedChunks.push(chunk);
-                            tokenCountText += chunk.compressedContent;
-                            if (chunk.allSiblingChunks) {
-                                for (const sibling of chunk.allSiblingChunks) {
-                                    if (alwaysAddAllSiblings ||
-                                        this.getEstimateTokenLength(tokenCountText) +
-                                            this.getEstimateTokenLength(sibling.compressedContent) <=
-                                            this.maxChunkTokenLength) {
-                                        collectRelevantChunks(sibling, tokenCountText);
-                                    }
-                                    else {
-                                        break;
-                                    }
-                                }
-                            }
-                            if (this.getEstimateTokenLength(tokenCountText) <
-                                this.maxChunkTokenLength &&
-                                chunk.inChunk) {
-                                collectRelevantChunks(chunk.inChunk[0], tokenCountText);
-                            }
-                        };
-                        collectRelevantChunks(chunk, "");
-                        // Sort the flattenedChunks based on chunkIndex
-                        flattenedChunks.sort((a, b) => a.chunkIndex - b.chunkIndex);
-                        ragDocument.chunks.push(chunk);
-                    }
-                    else {
-                        this.logger.error(`!!!!!!!!!!!!!!!!!!!!!!!!!! RagDocument ${chunk.inDocument.id} not found in map`);
-                    }
-                }
-            }
-            return Array.from(ragDocumentsMap.values());
-        }
-        catch (err) {
-            throw err;
-        }
-    }
 }
+//# sourceMappingURL=ragDocument.js.map

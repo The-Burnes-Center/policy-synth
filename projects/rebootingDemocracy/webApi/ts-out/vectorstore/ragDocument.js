@@ -1,18 +1,23 @@
 import weaviate from "weaviate-ts-client";
-import { PolicySynthScAgentBase } from "@policysynth/agents//baseAgent.js";
-import { PsConstants } from "@policysynth/agents/constants.js";
+import { PolicySynthAgentBase } from "@policysynth/agents//baseAgent.js";
+import { IEngineConstants } from "@policysynth/agents/constants.js";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
+export class PsRagDocumentVectorStore extends PolicySynthAgentBase {
     static allFieldsToExtract = "title url lastModified size \
        description shortDescription fullDescriptionOfAllContents \
       compressedFullDescriptionOfAllContents \
       contentType allReferencesWithUrls allOtherReferences \
       allImageUrls  documentMetaData\
      _additional { id, distance, confidence }";
-    static urlField = "url";
+     static urlField = `
+     url
+     _additional {
+       id
+     }
+   `;
     static weaviateKey = PsRagDocumentVectorStore.getWeaviateKey();
     static client = weaviate.client({
         scheme: process.env.WEAVIATE_HTTP_SCHEME || "http",
@@ -77,6 +82,37 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
             console.error(`Error creating schema: ${err}`);
         }
     }
+    async deleteDocumentsByIds(documentIds, dryRun) {
+        try {
+          const response = await PsRagDocumentVectorStore.client.batch
+            .objectsBatchDeleter()
+            .withClassName("RagDocument")
+            .withWhere({
+              path: ['id'],
+              operator: 'ContainsAny',
+              valueTextArray: documentIds,
+            })
+            .withDryRun(dryRun)
+            .withOutput('verbose')
+            .do();
+      
+          console.log(`Deletion response: ${JSON.stringify(response, null, 2)}`);
+      
+          if (dryRun) {
+            console.log(`Dry run complete. Objects that would be deleted:`);
+            response.matchingObjects.forEach((obj) => {
+              console.log(`- ID: ${obj.id}, Status: ${obj.status}`);
+            });
+          } else {
+            console.log(`Successfully deleted documents with IDs: ${documentIds.join(', ')}`);
+          }
+      
+          return response; // Return the response
+        } catch (err) {
+          console.error(`Error deleting documents:`, err);
+          throw err; // Rethrow the error for the caller to handle
+        }
+      }
     async testQuery() {
         const where = [];
         const res = await PsRagDocumentVectorStore.client.graphql

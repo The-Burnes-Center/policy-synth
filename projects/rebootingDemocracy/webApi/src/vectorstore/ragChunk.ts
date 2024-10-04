@@ -1,15 +1,15 @@
 import weaviate from "weaviate-ts-client";
 import { WeaviateClient } from "weaviate-ts-client";
-import { PolicySynthScAgentBase } from "@policysynth/agents//baseAgent.js";
+import { PolicySynthAgentBase } from "@policysynth/agents//baseAgent.js";
 
-import { PsConstants } from "@policysynth/agents/constants.js";
+import { IEngineConstants } from "@policysynth/agents/constants.js";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export class PsRagChunkVectorStore extends PolicySynthScAgentBase {
+export class PsRagChunkVectorStore extends PolicySynthAgentBase {
   static allFieldsToExtract =
     "title chunkIndex chapterIndex mainExternalUrlFound  \
          shortSummary fullSummary \
@@ -35,6 +35,70 @@ export class PsRagChunkVectorStore extends PolicySynthScAgentBase {
       const key = process.env.WEAVIATE_APIKEY || "";  // Provide a default empty string if the key is undefined
       console.log(`Weaviate API Key: ${key ? 'Retrieved successfully' : 'Not found or is empty'}`);
       return key;
+    }
+
+      async getChunksByDocumentId(documentId: string): Promise<any> {
+          const query = `
+            {
+              Get {
+                RagDocumentChunk(
+                  where: {
+                    path: ["inDocument", "RagDocument", "_id"]
+                    operator: Equal
+                    valueString: "${documentId}"
+                  }
+                  limit: 100
+                ) {
+                  title
+                  _additional {
+                    id
+                  }
+                }
+              }
+            }
+          `;
+          try {
+              const response = await PsRagChunkVectorStore.client.graphql
+                  .raw()
+                  .withQuery(query)
+                  .do();
+              return response;
+          }
+          catch (err) {
+              console.error(`Error fetching chunks by document ID: ${err}`);
+              throw err;
+          }
+      
+    }
+
+
+    async deleteChunksByIds(chunkIds: string[], dryRun: boolean = false): Promise<void> {
+      try {
+        const response = await PsRagChunkVectorStore.client.batch
+          .objectsBatchDeleter()
+          .withClassName("RagDocumentChunk")
+          .withWhere({
+            path: ['id'],
+            operator: 'ContainsAny',
+            valueTextArray: chunkIds,
+          })
+          .withDryRun(dryRun)
+          .withOutput('verbose')
+          .do();
+  
+        console.log(`Deletion response: ${JSON.stringify(response, null, 2)}`);
+  
+        if (dryRun) {
+          console.log(`Dry run complete. Objects that would be deleted:`);
+          response.matchingObjects.forEach((obj: any) => {
+            console.log(`- ID: ${obj.id}, Status: ${obj.status}`);
+          });
+        } else {
+          console.log(`Successfully deleted chunks with IDs: ${chunkIds.join(', ')}`);
+        }
+      } catch (err) {
+        console.error(`Error deleting chunks:`, err);
+      }
     }
 
   async addSchema() {

@@ -1,15 +1,15 @@
 import weaviate from "weaviate-ts-client";
 import { WeaviateClient } from "weaviate-ts-client";
-import { PolicySynthScAgentBase } from "@policysynth/agents//baseAgent.js";
+import { PolicySynthAgentBase} from "@policysynth/agents//baseAgent.js";
 
-import { PsConstants } from "@policysynth/agents/constants.js";
+import { IEngineConstants } from "@policysynth/agents/constants.js";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
+export class PsRagDocumentVectorStore extends PolicySynthAgentBase{
   static allFieldsToExtract =
     "title url lastModified size \
        description shortDescription fullDescriptionOfAllContents \
@@ -17,7 +17,12 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
       contentType allReferencesWithUrls allOtherReferences \
       allImageUrls  documentMetaData\
      _additional { id, distance, confidence }";
-  static urlField = "url";
+     static urlField = `
+     url
+     _additional {
+       id
+     }
+   `;
 
   static weaviateKey =  PsRagDocumentVectorStore.getWeaviateKey();
 
@@ -86,6 +91,35 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
       console.log(res);
     } catch (err) {
       console.error(`Error creating schema: ${err}`);
+    }
+  }
+
+  async deleteDocumentsByIds(documentIds: string[], dryRun: boolean = false): Promise<void> {
+    try {
+      const response = await PsRagDocumentVectorStore.client.batch
+        .objectsBatchDeleter()
+        .withClassName("RagDocument")
+        .withWhere({
+          path: ['id'],
+          operator: 'ContainsAny',
+          valueTextArray: documentIds,
+        })
+        .withDryRun(dryRun)
+        .withOutput('verbose')
+        .do();
+
+      console.log(`Deletion response: ${JSON.stringify(response, null, 2)}`);
+
+      if (dryRun) {
+        console.log(`Dry run complete. Objects that would be deleted:`);
+        response.matchingObjects.forEach((obj: any) => {
+          console.log(`- ID: ${obj.id}, Status: ${obj.status}`);
+        });
+      } else {
+        console.log(`Successfully deleted documents with IDs: ${documentIds.join(', ')}`);
+      }
+    } catch (err) {
+      console.error(`Error deleting documents:`, err);
     }
   }
 
@@ -194,7 +228,7 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
         .get()
         .withClassName("RagDocument")
         .withNearText({ concepts: [query] })
-        .withLimit(PsConstants.limits.webPageVectorResultsForNewSolutions)
+        .withLimit(IEngineConstants.limits.webPageVectorResultsForNewSolutions)
         /*.withWhere({
           operator: "And",
           operands: where,
@@ -209,37 +243,27 @@ export class PsRagDocumentVectorStore extends PolicySynthScAgentBase {
   }
 
 async searchDocumentsByUrl(docUrl: string): Promise<PsRagDocumentSourceGraphQlResponse | undefined | null> {
-    const where: any[] = [
-      {
-        operator: "Or",
-        operands: [
-          {
-            operator: "Equal",
-            path: ["url"],
-            valueString: docUrl
-          }
-        ]
-      }
-    ];
-
+    const where = {
+      operator: "Equal",
+      path: ["url"],
+      valueString: docUrl,
+    };
+  
     try {
-      let results = await PsRagDocumentVectorStore.client.graphql
+      const results = await PsRagDocumentVectorStore.client.graphql
         .get()
         .withClassName("RagDocument")
-        .withWhere(where[0] as any)
+        .withWhere(where)
         .withFields(PsRagDocumentVectorStore.urlField)
         .do();
-
-      // Check if results are empty or null and handle accordingly
-      if (!results) {
-        console.log('No documents found. Database might be empty for this query.');
-        // Handle the empty db scenario here, such as continuing with your process
-        return null; // Or however you wish to handle this scenario
+  
+      if (!results || !results.data || !results.data.Get || !results.data.Get.RagDocument) {
+        console.log('No documents found.');
+        return null;
       }
-
-      return results as PsRagDocumentSourceGraphQlResponse;
+  
+      return results;
     } catch (err) {
-      // Handle different errors differently, e.g., schema errors, network errors, etc.
       console.error('Error while querying documents:', err);
       throw err;
     }
