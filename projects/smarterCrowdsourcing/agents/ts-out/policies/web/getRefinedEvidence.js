@@ -1,23 +1,23 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { GetEvidenceWebPagesAgent } from "./getEvidenceWebPages.js";
-import { PsAiModelSize, PsAiModelType } from "@policysynth/agents/aiModelTypes.js";
+import { PsAiModelSize, PsAiModelType, } from "@policysynth/agents/aiModelTypes.js";
+import { CreateEvidenceSearchQueriesAgent } from "../create/createEvidenceSearchQueries.js";
 //@ts-ignore
 puppeteer.use(StealthPlugin());
 export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
     renderEvidenceScanningPrompt(subProblemIndex, policy, type, text) {
         return [
-            this.createSystemMessage(`You are an expert in analyzing policy evidence:
+            this.createSystemMessage(`You are an expert in analyzing policy evidence from the web.
 
         Important Instructions:
-        1. Examine the "<text context>" and analyze the evidence on how it relates to the problem and the specified policy proposal.
-        2. Always rank JSON string[] output in importance to policy proposal.
-        3. Output scores in the ranges of 0-100.
-        4. Keep all texts clear and simple.
-        5. relevanceToPolicyProposal should outline how the evidence found in the text is relevant to the policy proposal.
-        6. mostRelevantParagraphs should be direct quotes from the most relevant and important paragraphs, in relation to the policy proposal, found in the text context, the most relevant paragraph should be first.
-        7. Instead of referring to "The text" refer to "The website".
-        8. Always output your results in the following JSON format:
+        1. Examine the "<websiteContent>" for evidence, if any, for the specified policy proposal.
+        2. Output scores in the ranges of 0-100.
+        3. Keep all texts clear and simple.
+        4. relevanceToPolicyProposal should outline how the evidence found in the text is relevant to the policy proposal.
+        5. mostRelevantParagraphs should be direct quotes from the most relevant and important paragraphs, in relation to the policy proposal, found in the websiteContent>.
+        6. Instead of referring to "The text" refer to "The website", if needed.
+        7. Always output your results in the following JSON format without any explainations:
         {
           relevanceToPolicyProposal: string;
           mostRelevantParagraphs: string[];
@@ -34,6 +34,8 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
           relevanceToTypeScore: number;
           relevanceScore: number;
           qualityScore: number;
+          contentPublishingYear: number;
+          hasPotentialRelevantEvidence: boolean;
         }`),
             this.createHumanMessage(`
         ${this.renderSubProblem(subProblemIndex, true)}
@@ -44,11 +46,9 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
 
         Policy Evidence Type: ${type}
 
-        <text context>
+        <websiteContent>
         ${text}
-        </text context>
-
-        Let's think step by step.
+        </websiteContent>
 
         JSON Output:
         `),
@@ -60,9 +60,7 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
             this.logger.debug(`Total token count: ${totalTokenCount} Prompt token count: ${JSON.stringify(promptTokenCount)}`);
             let textAnalysis;
             if (this.tokenInLimit < totalTokenCount) {
-                const maxTokenLengthForChunk = this.tokenInLimit -
-                    promptTokenCount -
-                    64;
+                const maxTokenLengthForChunk = this.tokenInLimit - promptTokenCount - 64;
                 this.logger.debug(`Splitting text into chunks of ${maxTokenLengthForChunk} tokens`);
                 const splitText = this.splitText(text, maxTokenLengthForChunk, subProblemIndex);
                 this.logger.debug(`Got ${splitText.length} splitTexts`);
@@ -138,27 +136,41 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
                 ...(data1.risksForPolicy || []),
                 ...(data2.risksForPolicy || []),
             ],
+            hasPotentialRelevantEvidence: data1.hasPotentialRelevantEvidence || data2.hasPotentialRelevantEvidence,
             relevanceToPolicyProposal: data1.relevanceToPolicyProposal,
             relevanceToTypeScore: data1.relevanceToTypeScore,
             confidenceScore: data1.confidenceScore,
             relevanceScore: data1.relevanceScore,
             qualityScore: data1.qualityScore,
+            contentPublishingYear: data1.contentPublishingYear,
             totalScore: data1.totalScore,
             summary: data1.summary,
-            hasBeenRefined: true
+            hasBeenRefined: true,
         };
     }
-    async processPageText(text, subProblemIndex, url, type, entityIndex, policy = undefined) {
+    async processPageText(text, subProblemIndex, url, type, entityIndex, policy) {
         this.logger.debug(`Processing page text ${text.slice(0, 150)} for ${url} for ${type} search results ${subProblemIndex} sub problem index`);
         try {
             const refinedAnalysis = (await this.getEvidenceTextAnalysis(subProblemIndex, policy, type, text));
             if (refinedAnalysis) {
                 this.logger.debug(`Saving refined analysis ${JSON.stringify(refinedAnalysis, null, 2)}`);
                 refinedAnalysis.hasBeenRefined = true;
+                refinedAnalysis.url = url;
+                refinedAnalysis.type = type;
                 try {
-                    await this.evidenceWebPageVectorStore.updateRefinedAnalysis(policy.vectorStoreId, refinedAnalysis);
+                    if (!policy.webEvidence) {
+                        policy.webEvidence = [];
+                    }
+                    if (refinedAnalysis.hasPotentialRelevantEvidence) {
+                        policy.webEvidence.push(refinedAnalysis);
+                    }
+                    else {
+                        this.logger.info(`No potential relevant evidence for ${url}`);
+                        this.logger.info(JSON.stringify(refinedAnalysis, null, 2));
+                    }
                     this.totalPagesSave += 1;
                     this.logger.info(`Total ${this.totalPagesSave} saved pages`);
+                    await this.saveMemory();
                 }
                 catch (e) {
                     this.logger.error(`Error posting web page for url ${url}`);
@@ -177,34 +189,68 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
     }
     async getAndProcessEvidencePage(subProblemIndex, url, browserPage, type, policy) {
         if (url.toLowerCase().endsWith(".pdf")) {
-            await this.getAndProcessPdf(subProblemIndex, url, type, undefined, policy);
+            try {
+                await this.getAndProcessPdf(subProblemIndex, url, type, undefined, policy);
+            }
+            catch (error) {
+                this.logger.error(`Error in getAndProcessPdf: ${error}`);
+            }
         }
         else {
-            await this.getAndProcessHtml(subProblemIndex, url, browserPage, type, undefined, policy);
+            try {
+                await this.getAndProcessHtml(subProblemIndex, url, browserPage, type, undefined, policy);
+            }
+            catch (error) {
+                this.logger.error(`Error in getAndProcessHtml: ${error}`);
+            }
         }
         return true;
     }
-    async refineWebEvidence(policy, subProblemIndex, page) {
+    async refineWebEvidence(policyIn, subProblemIndex, page) {
         const limit = 10;
+        const resetWebEvidence = false;
         try {
-            for (const evidenceType of this.policyEvidenceFieldTypes) {
-                const searchType = this.simplifyEvidenceType(evidenceType);
-                const results = await this.evidenceWebPageVectorStore.getTopPagesForProcessing(this.memory.groupId, subProblemIndex, policy.title, searchType, limit);
-                this.logger.debug(`Got ${results.data.Get["EvidenceWebPage"].length} WebPage results from Weaviate`);
-                if (results.data.Get["EvidenceWebPage"].length === 0) {
-                    this.logger.error(`No results for ${policy.title} ${searchType}`);
-                    continue;
+            const subProblem = this.memory.subProblems[subProblemIndex];
+            const policies = subProblem.policies?.populations[subProblem.policies.populations.length - 1];
+            if (policies) {
+                for (let policyIndex = 0; policyIndex < policies.length; policyIndex++) {
+                    this.logger.info(`Getting evidence web pages for policy ${policyIndex}/${policies.length} of sub problem ${subProblemIndex} (${this.lastPopulationIndex(subProblemIndex)})`);
+                    const policy = policies[policyIndex];
+                    if (resetWebEvidence) {
+                        policy.webEvidence = [];
+                    }
+                    for (const searchResultType of CreateEvidenceSearchQueriesAgent.evidenceWebPageTypesArray) {
+                        // First check if policy.webEvidence contains any evidence of searchResultType
+                        if (policy.webEvidence &&
+                            policy.webEvidence.some((evidence) => evidence.type === searchResultType)) {
+                            this.logger.info(`Skipping searchResultType ${searchResultType} as policy.webEvidence already contains evidence of this type`);
+                            continue;
+                        }
+                        const urlsToGet = policy.evidenceSearchResults[searchResultType];
+                        if (urlsToGet) {
+                            const random = Math.random();
+                            let filteredUrlsToGet;
+                            if (random < 0.95) {
+                                // 95% chance, filter out items with originalPosition less than 5
+                                this.logger.debug(`---------------------> Filtering out items with originalPosition less than 3`);
+                                filteredUrlsToGet = urlsToGet.filter((item) => item.originalPosition <= 3);
+                            }
+                            else {
+                                // 5% chance, filter out items with originalPosition greater than 5
+                                this.logger.debug(`Filtering out items with originalPosition greater than 5`);
+                                filteredUrlsToGet = urlsToGet.filter((item) => item.originalPosition >= 7);
+                            }
+                            this.logger.info(`========================================================================================== > > > Count of urls to get: ${filteredUrlsToGet.length}`);
+                            for (let i = 0; i < filteredUrlsToGet.length; i++) {
+                                await this.getAndProcessEvidencePage(subProblemIndex, filteredUrlsToGet[i].url, page, searchResultType, policy);
+                            }
+                        }
+                        else {
+                            console.error(`No urls to get for ${searchResultType} for policy ${policyIndex} of sub problem ${subProblemIndex} (${this.lastPopulationIndex(subProblemIndex)})`);
+                        }
+                    }
                 }
-                let pageCounter = 0;
-                for (const retrievedObject of results.data.Get["EvidenceWebPage"]) {
-                    const webPage = retrievedObject;
-                    const id = webPage._additional.id;
-                    this.logger.info(`Score ${webPage.totalScore} for ${webPage.url}`);
-                    this.logger.debug(`All scores ${webPage.relevanceScore} ${webPage.relevanceToTypeScore} ${webPage.confidenceScore} ${webPage.qualityScore}`);
-                    policy.vectorStoreId = id;
-                    await this.getAndProcessEvidencePage(subProblemIndex, webPage.url, page, searchType, policy);
-                    this.logger.info(`${subProblemIndex} - (+${pageCounter++}) - ${id} - Updated`);
-                }
+                await this.saveMemory();
             }
         }
         catch (error) {
@@ -224,10 +270,11 @@ export class GetRefinedEvidenceAgent extends GetEvidenceWebPagesAgent {
             await newPage.setUserAgent(this.currentUserAgent);
             const subProblem = this.memory.subProblems[subProblemIndex];
             if (!skipSubProblemsIndexes.includes(subProblemIndex)) {
-                if (subProblem.policies) {
+                if (subProblem.policies &&
+                    subProblem.policies.populations &&
+                    subProblem.policies.populations.length > 0) {
                     const policies = subProblem.policies.populations[currentGeneration];
-                    for (let p = 0; p <
-                        Math.min(policies.length, this.maxTopPoliciesToProcess); p++) {
+                    for (let p = 0; p < Math.min(policies.length, this.maxTopPoliciesToProcess); p++) {
                         const policy = policies[p];
                         try {
                             await this.refineWebEvidence(policy, subProblemIndex, newPage);

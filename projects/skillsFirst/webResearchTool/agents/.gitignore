@@ -2,3 +2,4 @@ node_modules
 src/master_sheet_skillsbased_StateTitle_Analysis.csv
 src/addMainCategories.cjs
 src/updateStateTitles.cjs
+data

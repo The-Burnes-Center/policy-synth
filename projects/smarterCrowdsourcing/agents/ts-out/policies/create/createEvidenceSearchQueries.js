@@ -26,7 +26,7 @@ export class CreateEvidenceSearchQueriesAgent extends BaseSmarterCrowdsourcingAg
         "implementationFeasibility",
     ];
     filterPolicyParameters(policy) {
-        const { imageUrl, imagePrompt, solutionIndex, ...filteredPolicy } = policy;
+        const { imageUrl, imagePrompt, solutionIndex, evidenceSearchQueries, ...filteredPolicy } = policy;
         return filteredPolicy;
     }
     async renderCreatePrompt(subProblemIndex, policy, searchResultType) {
@@ -129,8 +129,10 @@ export class CreateEvidenceSearchQueriesAgent extends BaseSmarterCrowdsourcingAg
         for (const searchResultType of CreateEvidenceSearchQueriesAgent.evidenceWebPageTypesArray) {
             if (!policy.evidenceSearchQueries[searchResultType]) {
                 this.logger.info(`Creating evidence search queries for ${subProblemIndex}/${policyIndex}: ${searchResultType} search results`);
+                const createPrompt = await this.renderCreatePrompt(subProblemIndex, policy, searchResultType);
+                //this.logger.debug(JSON.stringify(createPrompt, null, 2));
                 // create search queries for each type
-                let searchResults = (await this.callModel(PsAiModelType.Text, PsAiModelSize.Medium, await this.renderCreatePrompt(subProblemIndex, policy, searchResultType)));
+                let searchResults = (await this.callModel(PsAiModelType.Text, PsAiModelSize.Medium, createPrompt));
                 this.logger.info(`Refine evidence search queries for ${subProblemIndex}/${policyIndex}: ${searchResultType} search results`);
                 searchResults = (await this.callModel(PsAiModelType.Text, PsAiModelSize.Medium, await this.renderRefinePrompt(subProblemIndex, policy, searchResultType, searchResults)));
                 this.logger.info(`Ranking evidence search queries for ${subProblemIndex}/${policyIndex}: ${searchResultType} search results`);
@@ -145,12 +147,13 @@ export class CreateEvidenceSearchQueriesAgent extends BaseSmarterCrowdsourcingAg
     }
     async process() {
         this.logger.info("Create Evidence Search Queries Agent");
-        super.process();
+        await super.process();
         const subProblemsLimit = Math.min(this.memory.subProblems.length, this.maxSubProblems);
-        const subProblemsPromises = Array.from({ length: subProblemsLimit }, async (_, subProblemIndex) => {
+        for (let subProblemIndex = 0; subProblemIndex < subProblemsLimit; subProblemIndex++) {
             const subProblem = this.memory.subProblems[subProblemIndex];
             const policies = subProblem.policies?.populations[subProblem.policies.populations.length - 1];
             if (policies) {
+                this.logger.debug(`----> Sub problem ${subProblemIndex} has ${policies.length} policies`);
                 for (let policyIndex = 0; policyIndex < policies.length; policyIndex++) {
                     this.logger.info(`Creating evidence search queries for policy ${policyIndex}/${policies.length} of sub problem ${subProblemIndex} (${this.lastPopulationIndex(subProblemIndex)})`);
                     const policy = policies[policyIndex];
@@ -159,11 +162,10 @@ export class CreateEvidenceSearchQueriesAgent extends BaseSmarterCrowdsourcingAg
                 }
             }
             else {
-                this.logger.debug(`Sub problem ${subProblemIndex} already has ${subProblem.policies?.populations.length} populations`);
+                this.logger.debug(`Sub problem ${subProblemIndex} has ${subProblem.policies?.populations.length} populations`);
             }
             await this.saveMemory();
-        });
-        await Promise.all(subProblemsPromises);
+        }
         this.logger.info("Finished creating policies evidence search queries for all subproblems");
     }
 }
