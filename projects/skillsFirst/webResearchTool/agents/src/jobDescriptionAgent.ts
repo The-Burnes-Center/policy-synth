@@ -110,62 +110,71 @@ export class JobDescriptionAnalysisAgent extends PolicySynthAgent {
     return htmlContent.replace(/<[^>]*>?/gm, ""); // Remove HTML tags
   }
 
-  // Function to process individual job descriptions
-  private async processJobDescription(jobDescription: JobDescription) {
-    // Step 1: Determine if the JobDescription includes a discussion of a college degree or higher education requirement.
-    const determineDegreeStatusAgent = new DetermineCollegeDegreeStatusAgent(
-      this.agent,
-      this.memory,
-      0,
-      20
-    );
-    await determineDegreeStatusAgent.processJobDescription(jobDescription);
+    // Function to process individual job descriptions
+private async processJobDescription(jobDescription: JobDescription) {
+  // Step 1: Determine if the JobDescription includes a discussion of a college degree or higher education requirement.
+  const determineDegreeStatusAgent = new DetermineCollegeDegreeStatusAgent(
+    this.agent,
+    this.memory,
+    0,
+    17
+  );
+  await determineDegreeStatusAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
 
-    await this.saveMemory();
+  // Step 2: For all EducationTypes identified as True (except HighSchool), review evidence quote.
+  const reviewEvidenceQuoteAgent = new ReviewEvidenceQuoteAgent(
+    this.agent,
+    this.memory,
+    17,
+    34
+  );
+  await reviewEvidenceQuoteAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
 
-    // Step 2: For all EducationTypes identified as True (except HighSchool), review evidence quote.
-    const reviewEvidenceQuoteAgent = new ReviewEvidenceQuoteAgent(
-      this.agent,
-      this.memory,
-      20,
-      40
-    );
-    await reviewEvidenceQuoteAgent.processJobDescription(jobDescription);
-    await this.saveMemory();
+  // Step 3: Determine whether any college degree requirement is mandatory or permissive.
+  const determineMandatoryStatusAgent = new DetermineMandatoryStatusAgent(
+    this.agent,
+    this.memory,
+    34,
+    51
+  );
+  await determineMandatoryStatusAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
 
-    // Step 3: Determine whether any college degree requirement is mandatory or permissive.
-    const determineMandatoryStatusAgent = new DetermineMandatoryStatusAgent(
-      this.agent,
-      this.memory,
-      40,
-      60
-    );
+  // Step 4: Determine whether any professional license is required.
+  const determineProfessionalLicenseAgent = new DetermineProfessionalLicenseRequirementAgent(
+    this.agent,
+    this.memory,
+    51,
+    68
+  );
+  await determineProfessionalLicenseAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
 
-    await determineMandatoryStatusAgent.processJobDescription(jobDescription);
-    await this.saveMemory();
+  // Step 5: Identify any barriers to hiring applicants without a college or university degree.
+  const identifyBarriersAgent = new IdentifyBarriersAgent(
+    this.agent,
+    this.memory,
+    68,
+    85
+  );
+  await identifyBarriersAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
 
-    // Step 4: Determine whether any professional license is required.
-    const determineProfessionalLicenseAgent = new DetermineProfessionalLicenseRequirementAgent(
-      this.agent,
-      this.memory,
-      60,
-      80
-    );
-    await determineProfessionalLicenseAgent.processJobDescription(jobDescription);
-    await this.saveMemory();
+  // Step 6: Validate data consistency
+  const validateJobDescriptionAgent = new ValidateJobDescriptionAgent(
+    this.agent,
+    this.memory,
+    85,
+    100
+  );
+  await validateJobDescriptionAgent.processJobDescription(jobDescription);
+  await this.saveMemory();
+}
 
-    // Step 5: Identify any barriers to hiring applicants without a college or university degree.
-    const identifyBarriersAgent = new IdentifyBarriersAgent(
-      this.agent,
-      this.memory,
-      80,
-      100
-    );
-    await identifyBarriersAgent.processJobDescription(jobDescription);
-    await this.saveMemory();
 
-  }
-
+ 
   // Static method to get agent class attributes
   static getAgentClass(): PsAgentClassCreationAttributes {
     return {

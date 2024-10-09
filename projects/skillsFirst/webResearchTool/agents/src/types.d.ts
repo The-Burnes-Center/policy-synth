@@ -203,6 +203,10 @@ interface JobDescriptionDegreeAnalysis {
 // From the last question: 
 // "Identify any barrier or obstacle stated, suggested, or described in the job description to hiring an applicant who does not have a college or university degree.
 // If there are no barriers, leave the field blank. Do not fabricate any information."
+
+validationChecks?: DataConsistencyChecks;
+// Contains the results of data consistency checks based on predefined hypotheses.
+
 }
 
 
@@ -314,6 +318,55 @@ export interface OccupationalSubCategory {
   id: string;
 }
 
+
+
+interface DataConsistencyChecks {
+  cscRevisedConsistency?: boolean;
+  // Checks if when cscRevised is true, then certain conditions are met:
+  // If cscRevised is true, then degreeRequirementStatus.hasAlternativeQualifications and degreeRequirementStatus.multipleQualificationPaths should be true,
+  // and degreeRequirementStatus.isDegreeMandatory and degreeRequirementStatus.isDegreeAbsolutelyRequired should be false.
+
+  requiredAlternativeExplanationConsistency?: boolean;
+  // Checks if both 'required' and 'alternative' are true, then mandatoryStatusExplanations.bothTrueExplanation should be filled.
+  // If both are false, then mandatoryStatusExplanations.bothFalseExplanation should be filled.
+
+  needsCollegeDegreeConsistency?: boolean;
+  // If needsCollegeDegree is true, then educationRequirements should be filled.
+  // Also, either degreeRequirementStatus.isDegreeMandatory/isDegreeAbsolutelyRequired or
+  // degreeRequirementStatus.hasAlternativeQualifications/multipleQualificationPaths should be true,
+  // and degreeRequirementStatus.alternativeQualifications should be filled in.
+
+  educationRequirementsConsistency?: boolean;
+  // If educationRequirements includes any degree requirement other than "college coursework" or "high school degree",
+  // then either degreeRequirementStatus.isDegreeMandatory/isDegreeAbsolutelyRequired or
+  // degreeRequirementStatus.hasAlternativeQualifications/multipleQualificationPaths should be true,
+  // and degreeRequirementStatus.alternativeQualifications should be filled in.
+
+  alternativeQualificationsConsistency?: boolean;
+  // Checks that degreeRequirementStatus.hasAlternativeQualifications and degreeRequirementStatus.multipleQualificationPaths have identical results.
+
+  degreeMandatoryConsistency?: boolean;
+  // Checks that degreeRequirementStatus.isDegreeMandatory and degreeRequirementStatus.isDegreeAbsolutelyRequired have identical results.
+
+  alternativesIfTrueConsistency?: boolean;
+  // If degreeRequirementStatus.hasAlternativeQualifications or degreeRequirementStatus.multipleQualificationPaths is true,
+  // then degreeRequirementStatus.alternativeQualifications should be filled in,
+  // degreeRequirementStatus.substitutionPossible could be true,
+  // and mandatoryStatusExplanations.degreeRequirementExplanation should be filled in.
+
+  licenseIncludesDegreeRequirementConsistency?: boolean;
+  // If professionalLicenseRequirement.includesDegreeRequirement is true,
+  // then either degreeRequirementStatus.isDegreeMandatory/isDegreeAbsolutelyRequired or
+  // degreeRequirementStatus.hasAlternativeQualifications/multipleQualificationPaths should be true,
+  // and degreeRequirementStatus.alternativeQualifications should be filled in.
+
+  barriersToNonDegreeApplicantsConsistency?: boolean;
+  // If barriersToNonDegreeApplicants mentions a college or other higher education degree,
+  // then either degreeRequirementStatus.isDegreeMandatory/isDegreeAbsolutelyRequired or
+  // degreeRequirementStatus.hasAlternativeQualifications/multipleQualificationPaths should be true,
+  // and degreeRequirementStatus.alternativeQualifications should be filled in,
+  // and identify the same language in the job description.
+}
 
 //  Roberts first draft
 //   interface JobDescription {
