@@ -1,6 +1,7 @@
 import { PsAiModelSize, PsAiModelType } from "@policysynth/agents/aiModelTypes.js";
 import { PolicySynthAgent } from "@policysynth/agents/base/agent.js";
 import { PsAgent } from "@policysynth/agents/dbModels/agent.js";
+import { EducationType, EducationTypes } from '../educationTypes.js'; // Adjust the path as needed
 
 // Import necessary types and interfaces
 // Assuming these are defined in your codebase
@@ -50,6 +51,18 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
     degreeAnalysis.validationChecks = {} as DataConsistencyChecks;
     const validationChecks = degreeAnalysis.validationChecks;
 
+    // Prepare higher degree phrases for the LLM to reference
+    const higherDegreeTypes = [
+      EducationType.AssociatesDegree,
+      EducationType.BachelorsDegree,
+      EducationType.MastersDegree,
+      EducationType.DoctoralDegree,
+    ];
+
+    const higherDegreePhrases = higherDegreeTypes
+      .flatMap((type) => EducationTypes[type].phrases)
+      .map((phrase) => phrase.toLowerCase());
+
     // Prepare the system prompt for the LLM
     const systemPrompt = `You are an expert in analyzing job descriptions for data consistency.
 
@@ -76,6 +89,9 @@ ${JSON.stringify({
       barriersToNonDegreeApplicants: degreeAnalysis.barriersToNonDegreeApplicants
     }, null, 2)}
 
+List of higher degree phrases to consider:
+${JSON.stringify(higherDegreePhrases, null, 2)}
+
 Validation Checks:
 
 1. **cscRevisedConsistency**:
@@ -92,13 +108,15 @@ Validation Checks:
 3. **needsCollegeDegreeConsistency**:
    - If \`degreeAnalysis.needsCollegeDegree\` is true, then:
      - \`degreeAnalysis.educationRequirements\` must be filled (not empty).
-     - At least one of \`degreeStatus.isDegreeMandatory\`, \`degreeStatus.isDegreeAbsolutelyRequired\`, \`degreeStatus.hasAlternativeQualifications\`, or \`degreeStatus.multipleQualificationPaths\` must be true.
-     - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
+     - At least one of \`degreeStatus.isDegreeMandatory\` or \`degreeStatus.isDegreeAbsolutelyRequired\` is true, or the following conditions are met:
+       - At least one of \`degreeStatus.hasAlternativeQualifications\` or \`degreeStatus.multipleQualificationPaths\` is true.
+       - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
 
 4. **educationRequirementsConsistency**:
-   - If \`degreeAnalysis.educationRequirements\` includes any degree requirement other than "collegeCoursework" or "highschool", then:
-     - At least one of \`degreeStatus.isDegreeMandatory\`, \`degreeStatus.isDegreeAbsolutelyRequired\`, \`degreeStatus.hasAlternativeQualifications\`, or \`degreeStatus.multipleQualificationPaths\` must be true.
-     - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
+   - If \`degreeAnalysis.educationRequirements\` includes any degree requirement that mentions any of the higher degree phrases listed above, then:
+     - At least one of \`degreeStatus.isDegreeMandatory\` or \`degreeStatus.isDegreeAbsolutelyRequired\` is true, or the following conditions are met:
+       - At least one of \`degreeStatus.hasAlternativeQualifications\` or \`degreeStatus.multipleQualificationPaths\` is true.
+       - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
 
 5. **alternativeQualificationsConsistency**:
    - \`degreeStatus.hasAlternativeQualifications\` and \`degreeStatus.multipleQualificationPaths\` should have identical values (both true or both false).
@@ -109,18 +127,20 @@ Validation Checks:
 7. **alternativesIfTrueConsistency**:
    - If \`degreeStatus.hasAlternativeQualifications\` or \`degreeStatus.multipleQualificationPaths\` is true, then:
      - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
-     - \`degreeStatus.substitutionPossible\` is true or undefined.
+     - \`degreeStatus.substitutionPossible === true\`
      - \`explanations.degreeRequirementExplanation\` must be filled (not empty).
 
 8. **licenseIncludesDegreeRequirementConsistency**:
    - If \`professionalLicenseRequirement.includesDegreeRequirement\` is true, then:
-     - At least one of \`degreeStatus.isDegreeMandatory\`, \`degreeStatus.isDegreeAbsolutelyRequired\`, \`degreeStatus.hasAlternativeQualifications\`, or \`degreeStatus.multipleQualificationPaths\` must be true.
-     - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
+     - At least one of \`degreeStatus.isDegreeMandatory\` or \`degreeStatus.isDegreeAbsolutelyRequired\` is true, or the following conditions are met:
+       - At least one of \`degreeStatus.hasAlternativeQualifications\` or \`degreeStatus.multipleQualificationPaths\` is true.
+       - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
 
 9. **barriersToNonDegreeApplicantsConsistency**:
-   - If \`degreeAnalysis.barriersToNonDegreeApplicants\` mentions a degree, then:
-     - At least one of \`degreeStatus.isDegreeMandatory\`, \`degreeStatus.isDegreeAbsolutelyRequired\`, \`degreeStatus.hasAlternativeQualifications\`, or \`degreeStatus.multipleQualificationPaths\` must be true.
-     - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
+   - If \`degreeAnalysis.barriersToNonDegreeApplicants\` mentions any of the higher degree phrases listed above, then:
+     - At least one of \`degreeStatus.isDegreeMandatory\` or \`degreeStatus.isDegreeAbsolutelyRequired\` is true, or the following conditions are met:
+       - At least one of \`degreeStatus.hasAlternativeQualifications\` or \`degreeStatus.multipleQualificationPaths\` is true.
+       - \`degreeStatus.alternativeQualifications\` must be filled (not empty).
      - The same degree-related language is identified in the job description.
 
 **Your task is to evaluate each validation check, and for each one, determine whether the condition is met.**

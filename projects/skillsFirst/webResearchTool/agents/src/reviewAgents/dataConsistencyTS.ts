@@ -1,6 +1,8 @@
 import { PsAiModelSize } from "@policysynth/agents/aiModelTypes.js";
 import { PolicySynthAgent } from "@policysynth/agents/base/agent.js";
 import { PsAgent } from "@policysynth/agents/dbModels/agent.js";
+import { EducationType, EducationTypes } from '../educationTypes.js'; // Adjust the path as needed
+
 
 // Import necessary types and interfaces
 // Assuming these are defined in your codebase
@@ -95,48 +97,83 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
         degreeAnalysis.educationRequirements !== undefined &&
         degreeAnalysis.educationRequirements.length > 0;
 
-      const eitherDegreeRequiredOrAlternativeTrue =
+      const degreeMandatoryOrAbsolutelyRequired =
         degreeStatus.isDegreeMandatory === true ||
-        degreeStatus.isDegreeAbsolutelyRequired === true ||
-        degreeStatus.hasAlternativeQualifications === true ||
-        degreeStatus.multipleQualificationPaths === true;
+        degreeStatus.isDegreeAbsolutelyRequired === true;
 
-      const alternativeQualificationsFilled =
+      const alternativesCondition =
+        (degreeStatus.hasAlternativeQualifications === true ||
+          degreeStatus.multipleQualificationPaths === true) &&
         degreeStatus.alternativeQualifications !== undefined &&
         degreeStatus.alternativeQualifications.length > 0;
 
       validationChecks.needsCollegeDegreeConsistency =
         educationRequirementsFilled &&
-        eitherDegreeRequiredOrAlternativeTrue &&
-        alternativeQualificationsFilled;
+        (degreeMandatoryOrAbsolutelyRequired || alternativesCondition);
     } else {
       // If needsCollegeDegree is not true, we consider the consistency check not applicable.
       validationChecks.needsCollegeDegreeConsistency = undefined;
     }
 
-    // 4. educationRequirementsConsistency
-    if (
-      degreeAnalysis.educationRequirements &&
-      degreeAnalysis.educationRequirements.some((req) =>
-        req.type !== "collegeCoursework" && req.type !== "highschool"
-      )
-    ) {
-      const eitherDegreeRequiredOrAlternativeTrue =
-        degreeStatus.isDegreeMandatory === true ||
-        degreeStatus.isDegreeAbsolutelyRequired === true ||
-        degreeStatus.hasAlternativeQualifications === true ||
-        degreeStatus.multipleQualificationPaths === true;
+   // 4. educationRequirementsConsistency
+   if (degreeAnalysis.educationRequirements && degreeAnalysis.educationRequirements.length > 0) {
+    // Function to detect if the requirement mentions a higher degree
+    const mentionsHigherDegree = (requirement: string): boolean => {
+      // List of higher degree types excluding 'collegeCoursework' and 'highschool'
+      const higherDegreeTypes = [
+        EducationType.AssociatesDegree,
+        EducationType.BachelorsDegree,
+        EducationType.MastersDegree,
+        EducationType.DoctoralDegree,
+      ];
 
-      const alternativeQualificationsFilled =
+      // Combine all phrases associated with higher degrees
+      const higherDegreePhrases = higherDegreeTypes
+        .flatMap((type) => EducationTypes[type].phrases)
+        .map((phrase) => phrase.toLowerCase());
+
+      // Normalize the requirement text
+      const normalizedReq = requirement.toLowerCase();
+
+      // Check if any higher degree phrases are present in the requirement
+      return higherDegreePhrases.some((phrase) => normalizedReq.includes(phrase));
+    };
+
+    // Check if any of the education requirements mention a higher degree
+    const includesHigherDegreeRequirement = degreeAnalysis.educationRequirements.some((req) => {
+      if (typeof req === 'string' && req.includes(':')) {
+        const [requirementTypePart] = req.split(':');
+        return mentionsHigherDegree(requirementTypePart);
+      } else if (typeof req === 'string') {
+        // If there's no ':', use the whole string
+        return mentionsHigherDegree(req);
+      } else {
+        // If req is not a string, skip this item
+        return false;
+      }
+    });
+
+    if (includesHigherDegreeRequirement) {
+      const degreeMandatoryOrAbsolutelyRequired =
+        degreeStatus.isDegreeMandatory === true ||
+        degreeStatus.isDegreeAbsolutelyRequired === true;
+
+      const alternativesCondition =
+        (degreeStatus.hasAlternativeQualifications === true ||
+          degreeStatus.multipleQualificationPaths === true) &&
         degreeStatus.alternativeQualifications !== undefined &&
         degreeStatus.alternativeQualifications.length > 0;
 
       validationChecks.educationRequirementsConsistency =
-        eitherDegreeRequiredOrAlternativeTrue && alternativeQualificationsFilled;
+        degreeMandatoryOrAbsolutelyRequired || alternativesCondition;
     } else {
       // If educationRequirements does not include higher degrees, we consider the check not applicable.
       validationChecks.educationRequirementsConsistency = undefined;
     }
+  } else {
+    // If educationRequirements is empty or undefined, we consider the check not applicable.
+    validationChecks.educationRequirementsConsistency = undefined;
+  }
 
     // 5. alternativeQualificationsConsistency
     if (
@@ -162,7 +199,7 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
       validationChecks.degreeMandatoryConsistency = undefined;
     }
 
-    // 7. alternativesIfTrueConsistency
+     // 7. alternativesIfTrueConsistency
     if (
       degreeStatus.hasAlternativeQualifications === true ||
       degreeStatus.multipleQualificationPaths === true
@@ -171,10 +208,9 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
         degreeStatus.alternativeQualifications !== undefined &&
         degreeStatus.alternativeQualifications.length > 0;
 
-      // substitutionPossible could be true (we accept both true and undefined)
+      // substitutionPossible should be true
       const substitutionPossibleAcceptable =
-        degreeStatus.substitutionPossible === true ||
-        degreeStatus.substitutionPossible === undefined;
+        degreeStatus.substitutionPossible === true;
 
       const degreeRequirementExplanationFilled =
         explanations.degreeRequirementExplanation !== undefined &&
@@ -194,58 +230,121 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
       professionalLicenseRequirement &&
       professionalLicenseRequirement.includesDegreeRequirement === true
     ) {
-      const eitherDegreeRequiredOrAlternativeTrue =
+      const degreeMandatoryOrAbsolutelyRequired =
         degreeStatus.isDegreeMandatory === true ||
-        degreeStatus.isDegreeAbsolutelyRequired === true ||
-        degreeStatus.hasAlternativeQualifications === true ||
-        degreeStatus.multipleQualificationPaths === true;
-
-      const alternativeQualificationsFilled =
+        degreeStatus.isDegreeAbsolutelyRequired === true;
+    
+      const alternativesCondition =
+        (degreeStatus.hasAlternativeQualifications === true ||
+          degreeStatus.multipleQualificationPaths === true) &&
         degreeStatus.alternativeQualifications !== undefined &&
         degreeStatus.alternativeQualifications.length > 0;
-
+    
       validationChecks.licenseIncludesDegreeRequirementConsistency =
-        eitherDegreeRequiredOrAlternativeTrue && alternativeQualificationsFilled;
+        degreeMandatoryOrAbsolutelyRequired || alternativesCondition;
     } else {
-      // If includesDegreeRequirement is not true, the check is not applicable.
+      // If includesDegreeRequirement is not true, we consider the check not applicable.
       validationChecks.licenseIncludesDegreeRequirementConsistency = undefined;
     }
 
-    // 9. barriersToNonDegreeApplicantsConsistency
-    if (degreeAnalysis.barriersToNonDegreeApplicants) {
-      // Check if barriersToNonDegreeApplicants mentions a college or other higher education degree
-      const mentionsDegree = /college|university|higher education degree|bachelor|master|doctorate|associate/i.test(
-        degreeAnalysis.barriersToNonDegreeApplicants
-      );
+  // 9. barriersToNonDegreeApplicantsConsistency
+if (degreeAnalysis.barriersToNonDegreeApplicants) {
 
-      if (mentionsDegree) {
-        const eitherDegreeRequiredOrAlternativeTrue =
-          degreeStatus.isDegreeMandatory === true ||
-          degreeStatus.isDegreeAbsolutelyRequired === true ||
-          degreeStatus.hasAlternativeQualifications === true ||
-          degreeStatus.multipleQualificationPaths === true;
 
-        const alternativeQualificationsFilled =
-          degreeStatus.alternativeQualifications !== undefined &&
-          degreeStatus.alternativeQualifications.length > 0;
+// Preprocess text function
+const preprocessText = (text: string): string => {
+  return text.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').toLowerCase().trim();
+};
 
-        // Check if the same language is identified in the job description
-        const jobDescriptionMentionsDegree = /college|university|higher education degree|bachelor|master|doctorate|associate/i.test(
-          jobDescription.text
-        );
+const levenshteinDistance = (a: string, b: string): number => {
+  const an = a.length;
+  const bn = b.length;
+  const matrix = Array.from({ length: an + 1 }, () => Array(bn + 1).fill(0));
 
-        validationChecks.barriersToNonDegreeApplicantsConsistency =
-          eitherDegreeRequiredOrAlternativeTrue &&
-          alternativeQualificationsFilled &&
-          jobDescriptionMentionsDegree;
-      } else {
-        // If barriersToNonDegreeApplicants does not mention a degree, the check is not applicable.
-        validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
-      }
-    } else {
-      // If barriersToNonDegreeApplicants is not provided, the check is not applicable.
-      validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
+  for (let i = 0; i <= an; i++) {
+    matrix[i][0] = i;
+  }
+  for (let j = 0; j <= bn; j++) {
+    matrix[0][j] = j;
+  }
+  for (let i = 1; i <= an; i++) {
+    for (let j = 1; j <= bn; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      const above = matrix[i - 1][j] + 1;
+      const left = matrix[i][j - 1] + 1;
+      const diag = matrix[i - 1][j - 1] + cost;
+      matrix[i][j] = Math.min(above, left, diag);
     }
+  }
+  return matrix[an][bn];
+};
+
+// Function to calculate similarity percentage
+const similarity = (a: string, b: string): number => {
+  const distance = levenshteinDistance(a, b);
+  const maxLength = Math.max(a.length, b.length);
+  return ((maxLength - distance) / maxLength) * 100;
+};
+
+  // Function to detect if the text mentions a higher degree
+  const mentionsDegree = (text: string): boolean => {
+    // List of higher degree types excluding 'collegeCoursework' and 'highschool'
+    const higherDegreeTypes = [
+      EducationType.AssociatesDegree,
+      EducationType.BachelorsDegree,
+      EducationType.MastersDegree,
+      EducationType.DoctoralDegree,
+    ];
+
+    // Combine all phrases associated with higher degrees
+    const higherDegreePhrases = higherDegreeTypes
+      .flatMap((type) => EducationTypes[type].phrases)
+      .map((phrase) => phrase.toLowerCase());
+
+    // Normalize the text
+    const normalizedText = text.toLowerCase();
+
+    // Check if any higher degree phrases are present in the text
+    return higherDegreePhrases.some((phrase) => normalizedText.includes(phrase));
+  };
+
+  if (mentionsDegree(degreeAnalysis.barriersToNonDegreeApplicants)) {
+    const degreeMandatoryOrAbsolutelyRequired =
+      degreeStatus.isDegreeMandatory === true ||
+      degreeStatus.isDegreeAbsolutelyRequired === true;
+
+    const alternativesCondition =
+      (degreeStatus.hasAlternativeQualifications === true ||
+        degreeStatus.multipleQualificationPaths === true) &&
+      degreeStatus.alternativeQualifications !== undefined &&
+      degreeStatus.alternativeQualifications.length > 0;
+
+    // Preprocess job description text
+    const jobDescriptionText = preprocessText(jobDescription.text);
+
+    // Preprocess alternative qualifications and check for fuzzy matches
+    const alternativeLanguageMatches = degreeStatus.alternativeQualifications.some((qualification) => {
+      const normalizedQualification = preprocessText(qualification);
+
+      // Calculate similarity percentage
+      const similarityPercentage = similarity(normalizedQualification, jobDescriptionText);
+
+      // Define a threshold for similarity (e.g., 80%)
+      return similarityPercentage >= 80;
+    });
+
+    validationChecks.barriersToNonDegreeApplicantsConsistency =
+      (degreeMandatoryOrAbsolutelyRequired || alternativesCondition) &&
+      alternativeLanguageMatches;
+  } else {
+    // If barriersToNonDegreeApplicants does not mention a higher degree, the check is not applicable.
+    validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
+  }
+} else {
+  // If barriersToNonDegreeApplicants is not provided, the check is not applicable.
+  validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
+}
+
 
     await this.updateRangedProgress(100, "Data consistency validation completed");
   }

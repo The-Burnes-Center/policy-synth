@@ -331,6 +331,11 @@ interface DataConsistencyChecks {
   // If both are false, then mandatoryStatusExplanations.bothFalseExplanation should be filled.
 
   needsCollegeDegreeConsistency?: boolean;
+  
+  // Example: 54726 -> needsCollegeDegree == true 
+  //educationRequirements == filled 
+  // 
+
   // If needsCollegeDegree is true, then educationRequirements should be filled.
   // Also, either degreeRequirementStatus.isDegreeMandatory/isDegreeAbsolutelyRequired or
   // degreeRequirementStatus.hasAlternativeQualifications/multipleQualificationPaths should be true,
