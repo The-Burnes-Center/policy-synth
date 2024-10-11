@@ -6,4 +6,5 @@ src/dataConsistency.cjs
 src/dataConsistency_revised_241009.cjs
 src/first_test_memory_validate.json
 src/first_test_memory_validate_241009.json
+startAgent.sh
 data
