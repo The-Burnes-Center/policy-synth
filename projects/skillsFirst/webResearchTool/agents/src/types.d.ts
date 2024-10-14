@@ -1,6 +1,11 @@
 // Enum representing various levels of education types.
 // Each member represents a specific education level, mapped to a string value.
 
+// Extend the types to include readability analysis using EducationType
+
+// Import the EducationType enum
+import { EducationType } from './educationTypes.js';
+
 
 // Interface defining additional information for each EducationType.
 // This includes a code and an array of phrases associated with the education type.
@@ -32,6 +37,7 @@ interface JobDescription {
   notes?: string;
   occupationalCategory: OccupationalCategory;
   degreeAnalysis: JobDescriptionDegreeAnalysis;
+  readabilityAnalysis?: JobDescriptionReadabilityAnalysis; // The readability analysis of the job description
 }
 /**
  * Extends memory data to include job descriptions.
@@ -372,6 +378,24 @@ interface DataConsistencyChecks {
   // and degreeRequirementStatus.alternativeQualifications should be filled in,
   // and identify the same language in the job description.
 }
+
+
+
+// Interface representing the result of readability assessments for different education levels
+interface ReadabilityAssessment {
+  educationType: EducationType; // The education level being assessed
+  isComprehensible: boolean; // Whether the job description is fully comprehensible for this education level
+  difficultLanguage?: string[]; // If not comprehensible, the language that is difficult to understand
+  readingMismatch?: boolean; // Indicates "Reading Mismatch" as per prompts
+}
+
+// Interface representing the readability analysis of a job description
+interface JobDescriptionReadabilityAnalysis {
+  assessedEducationLevel: EducationType; // The education level assessed for the job description (from Prompt #1)
+  readingLevelMatchesDegreeRequirement: boolean; // True if assessed education level matches degree requirement
+  readabilityAssessments: ReadabilityAssessment[]; // Array of readability assessments for different education levels
+}
+
 
 //  Roberts first draft
 //   interface JobDescription {
