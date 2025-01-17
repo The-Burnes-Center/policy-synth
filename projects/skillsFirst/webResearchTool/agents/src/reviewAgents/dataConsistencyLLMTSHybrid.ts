@@ -205,122 +205,149 @@ export class ValidateJobDescriptionAgent extends PolicySynthAgent {
     // Prepare the system prompt for the LLM
     const systemPrompt = `You are an expert in analyzing text for specific content.
 
-Based on the provided data, answer the following questions with "True" or "False".
-
-Job Description Text:
-${jobDescription.text}
-
-Extracted Data:
-
-degreeAnalysis.educationRequirements:
-${JSON.stringify(degreeAnalysis.educationRequirements, null, 2)}
-
-degreeAnalysis.barriersToNonDegreeApplicants:
-${JSON.stringify(degreeAnalysis.barriersToNonDegreeApplicants, null, 2)}
-
-degreeStatus.alternativeQualifications:
-${JSON.stringify(degreeStatus.alternativeQualifications, null, 2)}
-
-List of higher degree phrases to consider:
-${JSON.stringify(higherDegreePhrases, null, 2)}
-
-Questions:
-
-1. Does \`degreeAnalysis.educationRequirements\` include any degree requirement that mentions or closely matches any of the higher degree phrases listed above?
-
-Answer: True/False
-
-2. Does \`degreeAnalysis.barriersToNonDegreeApplicants\` mention or closely match any of the higher degree phrases listed above?
-
-Answer: True/False
-
-3. Do any of \`degreeStatus.alternativeQualifications\` closely match any part of the job description text?
-
-Answer: True/False
-
-Provide your answers in the following JSON format:
-
-\`\`\`json
-{
-  "includesHigherDegreeInEducationRequirements": "True/False",
-  "mentionsHigherDegreeInBarriers": "True/False",
-  "alternativeQualificationsMatchJobDescription": "True/False"
-}
-\`\`\`
-
-Do not include any explanations or additional text. Output only the JSON object.`;
-
-    // Call the LLM
-    const messages = [this.createSystemMessage(systemPrompt)];
-
-    const resultText = await this.callModel(
-      PsAiModelType.Text,
-      this.modelSize,
-      messages,
-      true // parse as JSON
-    );
-
-    // Parse the LLM's response
-    let result;
-    try {
-      result = JSON.parse(resultText) as {
-        includesHigherDegreeInEducationRequirements: string;
-        mentionsHigherDegreeInBarriers: string;
-        alternativeQualificationsMatchJobDescription: string;
-      };
-    } catch (error) {
-      this.logger.error('Error parsing LLM response:', error);
-      throw new Error('Failed to parse LLM response as JSON.');
+    Based on the provided data, answer the following questions with "True" or "False".
+    
+    Job Description Text:
+    ${jobDescription.text}
+    
+    Extracted Data:
+    
+    degreeAnalysis.educationRequirements:
+    ${JSON.stringify(degreeAnalysis.educationRequirements, null, 2)}
+    
+    degreeAnalysis.barriersToNonDegreeApplicants:
+    ${JSON.stringify(degreeAnalysis.barriersToNonDegreeApplicants, null, 2)}
+    
+    degreeStatus.alternativeQualifications:
+    ${JSON.stringify(degreeStatus.alternativeQualifications, null, 2)}
+    
+    List of higher degree phrases to consider:
+    ${JSON.stringify(higherDegreePhrases, null, 2)}
+    
+    Questions:
+    
+    1. Does \`degreeAnalysis.educationRequirements\` include any degree requirement that mentions or closely matches any of the higher degree phrases listed above?
+    
+    Answer: True/False
+    
+    2. Does \`degreeAnalysis.barriersToNonDegreeApplicants\` mention or closely match any of the higher degree phrases listed above?
+    
+    Answer: True/False
+    
+    3. Do any of \`degreeStatus.alternativeQualifications\` closely match any part of the job description text?
+    
+    Answer: True/False
+    
+    Provide your answers in the following JSON format:
+    
+    \`\`\`json
+    {
+      "includesHigherDegreeInEducationRequirements": "True/False",
+      "mentionsHigherDegreeInBarriers": "True/False",
+      "alternativeQualificationsMatchJobDescription": "True/False"
     }
-
-    // Map the string values to boolean
-    const mapResult = (value: string): boolean => {
-      return value.toLowerCase() === 'true';
-    };
-
-    // Use the LLM results in the JavaScript logic for validation checks 4 and 9
-
-    // 4. educationRequirementsConsistency
-    if (mapResult(result.includesHigherDegreeInEducationRequirements)) {
-      const degreeMandatoryOrAbsolutelyRequired =
-        degreeStatus.isDegreeMandatory === true ||
-        degreeStatus.isDegreeAbsolutelyRequired === true;
-
-      const alternativesCondition =
-        (degreeStatus.hasAlternativeQualifications === true ||
-          degreeStatus.multipleQualificationPaths === true) &&
-        degreeStatus.alternativeQualifications !== undefined &&
-        degreeStatus.alternativeQualifications.length > 0;
-
-      validationChecks.educationRequirementsConsistency =
-        degreeMandatoryOrAbsolutelyRequired || alternativesCondition;
-    } else {
-      // If educationRequirements does not include higher degrees, we consider the check not applicable.
-      validationChecks.educationRequirementsConsistency = undefined;
+    \`\`\`
+    
+    Do not include any explanations or additional text. Output only the JSON object.`;
+    
+        // Call the LLM
+        const messages = [this.createSystemMessage(systemPrompt)];
+        const resultText = await this.callModel(
+          PsAiModelType.Text,
+          this.modelSize,
+          messages,
+          true  // Indicate we expect JSON back
+        );
+    
+        let result;
+    
+        if (typeof resultText === 'string') {
+          // Extract JSON from the resultText
+          let jsonString = resultText;
+    
+          // Use a regular expression to match and extract JSON content from code blocks
+          const jsonCodeBlockRegex = /```json\s*([\s\S]*?)\s*```/;
+          const match = resultText.match(jsonCodeBlockRegex);
+          if (match && match[1]) {
+            jsonString = match[1];
+            this.logger.debug('Extracted JSON from code block');
+          } else {
+            this.logger.warn(
+              'No JSON code block found in LLM response, using entire response as JSON'
+            );
+          }
+    
+          // Parse the extracted JSON string
+          try {
+            result = JSON.parse(jsonString);
+            this.logger.info('Successfully parsed JSON from string response');
+          } catch (error) {
+            this.logger.error('Error parsing LLM response:', error);
+            throw new Error('Failed to parse LLM response as JSON.');
+          }
+        } else if (typeof resultText === 'object') {
+          // LLM returned an object, use it directly
+          result = resultText;
+          this.logger.debug('LLM response is an object, using it directly');
+          this.logger.info('Successfully received JSON object from LLM');
+        } else {
+          throw new Error(`Unexpected type of LLM response: ${typeof resultText}`);
+        }
+    
+        if (result) {
+          // Map the string values to boolean
+          const mapResult = (value: string): boolean => {
+            return value.toLowerCase() === 'true';
+          };
+    
+          // Use the LLM results in the JavaScript logic for validation checks 4 and 9
+    
+          // 4. educationRequirementsConsistency
+          if (mapResult(result.includesHigherDegreeInEducationRequirements)) {
+            const degreeMandatoryOrAbsolutelyRequired =
+              degreeStatus.isDegreeMandatory === true ||
+              degreeStatus.isDegreeAbsolutelyRequired === true;
+    
+            const alternativesCondition =
+              (degreeStatus.hasAlternativeQualifications === true ||
+                degreeStatus.multipleQualificationPaths === true) &&
+              degreeStatus.alternativeQualifications !== undefined &&
+              degreeStatus.alternativeQualifications.length > 0;
+    
+            validationChecks.educationRequirementsConsistency =
+              degreeMandatoryOrAbsolutelyRequired || alternativesCondition;
+          } else {
+            // If educationRequirements does not include higher degrees, we consider the check not applicable.
+            validationChecks.educationRequirementsConsistency = undefined;
+          }
+    
+          // 9. barriersToNonDegreeApplicantsConsistency
+          if (mapResult(result.mentionsHigherDegreeInBarriers)) {
+            const degreeMandatoryOrAbsolutelyRequired =
+              degreeStatus.isDegreeMandatory === true ||
+              degreeStatus.isDegreeAbsolutelyRequired === true;
+    
+            const alternativesCondition =
+              (degreeStatus.hasAlternativeQualifications === true ||
+                degreeStatus.multipleQualificationPaths === true) &&
+              degreeStatus.alternativeQualifications !== undefined &&
+              degreeStatus.alternativeQualifications.length > 0;
+    
+            const alternativeLanguageMatches = mapResult(result.alternativeQualificationsMatchJobDescription);
+    
+            validationChecks.barriersToNonDegreeApplicantsConsistency =
+              (degreeMandatoryOrAbsolutelyRequired || alternativesCondition) &&
+              alternativeLanguageMatches;
+          } else {
+            // If barriersToNonDegreeApplicants does not mention a higher degree, the check is not applicable.
+            validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
+          }
+        } else {
+          // Handle parsing error or invalid response
+          this.logger.error('Invalid response from LLM for data consistency validation.');
+          throw new Error('LLM did not return the expected data for validation.');
+        }
+    
+        await this.updateRangedProgress(100, "Data consistency validation completed");
+      }
     }
-
-    // 9. barriersToNonDegreeApplicantsConsistency
-    if (mapResult(result.mentionsHigherDegreeInBarriers)) {
-      const degreeMandatoryOrAbsolutelyRequired =
-        degreeStatus.isDegreeMandatory === true ||
-        degreeStatus.isDegreeAbsolutelyRequired === true;
-
-      const alternativesCondition =
-        (degreeStatus.hasAlternativeQualifications === true ||
-          degreeStatus.multipleQualificationPaths === true) &&
-        degreeStatus.alternativeQualifications !== undefined &&
-        degreeStatus.alternativeQualifications.length > 0;
-
-      const alternativeLanguageMatches = mapResult(result.alternativeQualificationsMatchJobDescription);
-
-      validationChecks.barriersToNonDegreeApplicantsConsistency =
-        (degreeMandatoryOrAbsolutelyRequired || alternativesCondition) &&
-        alternativeLanguageMatches;
-    } else {
-      // If barriersToNonDegreeApplicants does not mention a higher degree, the check is not applicable.
-      validationChecks.barriersToNonDegreeApplicantsConsistency = undefined;
-    }
-
-    await this.updateRangedProgress(100, "Data consistency validation completed");
-  }
-}
